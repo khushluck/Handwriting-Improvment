@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pentel EnerGel — Handwriting, Reimagined</title>
+<link rel="stylesheet" href="liquid-glass.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- READING PROGRESS -->
+<div class="progress-wrap">
+  <div class="progress-bar" id="readingProgress" role="progressbar" aria-label="Page reading progress"></div>
+</div>
+
+<!-- ============================================================
+     AURORA BACKGROUND
+     ============================================================ -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-orb aurora-orb--1"></div>
+  <div class="aurora-orb aurora-orb--2"></div>
+  <div class="aurora-orb aurora-orb--3"></div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-brand">Pentel EnerGel</a>
+
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#showcase-ink">Features</a></li>
+    <li><a href="#comparison">Analysis</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li class="dropdown">
+      <a href="#tips" class="dropdown-toggle">Tips</a>
+      <ul class="dropdown-menu">
+        <li><a href="#tip-01">Practice Regularly</a></li>
+        <li><a href="#tip-02">Consistent Letter Style</a></li>
+        <li><a href="#tip-03">Correct Pen Grip</a></li>
+        <li><a href="#tip-04">Right Pen and Paper</a></li>
+        <li><a href="#tip-05">Proper Posture</a></li>
+        <li><a href="#tip-06">Letter Spacing</a></li>
+        <li><a href="#tip-07">Word Spacing</a></li>
+        <li><a href="#tip-08">Writing Pressure</a></li>
+        <li><a href="#tip-09">Slow Down Before Speed</a></li>
+        <li><a href="#tip-10">Lined or Grid Paper</a></li>
+        <li><a href="#tip-11">Difficult Letters</a></li>
+        <li><a href="#tip-12">Slant Consistency</a></li>
+        <li><a href="#tip-13">Stretch Your Hands</a></li>
+        <li><a href="#tip-14">Reduce Hand Fatigue</a></li>
+        <li><a href="#tip-15">Seek Feedback</a></li>
+        <li><a href="#tip-16">Track Your Progress</a></li>
+        <li><a href="#tip-17">Analyze Handwriting</a></li>
+        <li><a href="#tip-18">Daily Practice Routine</a></li>
+        <li><a href="#tip-19">Learn From Examples</a></li>
+        <li><a href="#tip-20">Mistakes to Avoid</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch theme">
+        <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="theme-label" id="themeLabel">Light</span>
+      </button>
+      <div class="theme-menu" id="themeMenu">
+        <button data-theme="light" class="theme-option active">Light</button>
+        <button data-theme="dark" class="theme-option">Dark</button>
+        <button data-theme="system" class="theme-option">System</button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <span class="hero-label">Premium Gel Ink Technology</span>
+  <h2 class="hero-headline">
+    Handwriting,<br>
+    <span style="background:linear-gradient(135deg,#0071e3,#7b61ff,#00d8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Reimagined.</span>
+  </h2>
+  <p class="hero-subtitle">
+    Every great idea begins with a single stroke.<br>
+    Experience handwriting the way it was meant to feel — smooth, effortless, and precise.
+  </p>
+  <div class="hero-actions">
+    <a href="#introduction" class="btn btn-primary">Explore the Difference</a>
+    <a href="#tips" class="btn btn-secondary">View All Tips →</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     PEN SCROLL STORYTELLING
+     ============================================================ -->
+<img src="pentel-energel.png" alt="Pentel EnerGel Pen" class="pen-fixed" id="penStory" loading="eager">
+
+<div class="pen-story">
+
+  <section class="pen-story-section" id="story-1">
+    <div class="pen-story-content">
+      <h3>Engineered for Flow</h3>
+      <p>The Pentel EnerGel combines the smoothness of a gel pen with the permanence of a ballpoint. Every drop of ink is precision-formulated to deliver a flawless writing experience.</p>
+    </div>
+  </section>
+
+  <section class="pen-story-section" id="story-2">
+    <div class="pen-story-content">
+      <h3>Control at Every Angle</h3>
+      <p>From the ergonomic grip to the perfectly weighted barrel, every detail is designed to reduce hand fatigue and give you precise control over every letter, curve, and connection.</p>
+    </div>
+  </section>
+
+  <section class="pen-story-section" id="story-3">
+    <div class="pen-story-content">
+      <h3>Your Handwriting Journey</h3>
+      <p>Whether you are refining your signature or rebuilding your script from the ground up, the EnerGel adapts to your style — and helps you elevate it.</p>
+    </div>
+  </section>
+
+  <section class="pen-story-section" id="story-4">
+    <div class="pen-story-content">
+      <h3>Twenty Tips to Transform</h3>
+      <p>Scroll through twenty expert-crafted tips covering everything from grip and posture to spacing, pressure, and daily routine. Each tip is built to deliver measurable improvement.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============================================================
+     STATISTICS SECTION
+     ============================================================ -->
+<section class="content stats-section" id="stats">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number" data-target="20">0</span>
+      <span class="stat-label">Detailed Tips</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="100">0</span>
+      <span class="stat-suffix">+</span>
+      <span class="stat-label">Practice Exercises</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="11700">0</span>
+      <span class="stat-suffix">+</span>
+      <span class="stat-label">Words of Guidance</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="30">0</span>
+      <span class="stat-suffix">+</span>
+      <span class="stat-label">Day Improvement Plan</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
+<section class="content" id="introduction">
+  <h2>Introduction</h2>
+  <ul>
+    <li>Handwriting is an essential skill for communication and self-expression.</li>
+    <li>Handwriting can reveal aspects of personality and cognitive abilities.</li>
+    <li>Using the right pen can make a significant difference in handwriting quality.</li>
+    <li>Pentel EnerGel is a popular choice because of its smooth ink flow and comfortable grip.</li>
+  </ul>
+  <p class="note">NOTE: This article is based on personal experience and may not reflect the views of all users. For best results, practice regularly and seek feedback from others.</p>
+</section>
+
+<!-- ============================================================
+     INTERACTIVE PEN EXPLORER
+     ============================================================ -->
+<section class="pen-explorer" id="penExplorer">
+  <div class="pen-explorer-inner">
+    <div class="pen-explorer-visual">
+      <img src="pentel-energel.png" alt="Pentel EnerGel Pen" class="pen-explorer-img" loading="lazy">
+      <div class="hotspot" style="top:62%;left:20%" data-feature="tip">
+        <span class="hotspot-dot"></span>
+        <div class="hotspot-card"><h4>Precision Tip</h4><p>Needle-point design ensures every stroke is sharp, dark, and consistent.</p></div>
+      </div>
+      <div class="hotspot" style="top:50%;left:38%" data-feature="grip">
+        <span class="hotspot-dot"></span>
+        <div class="hotspot-card"><h4>Comfortable Grip</h4><p>Ergonomic rubber grip reduces hand fatigue by 40% during extended writing.</p></div>
+      </div>
+      <div class="hotspot" style="top:36%;left:55%" data-feature="ink">
+        <span class="hotspot-dot"></span>
+        <div class="hotspot-card"><h4>Smooth Ink Flow</h4><p>Low-viscosity gel ink glides effortlessly with just the weight of the pen.</p></div>
+      </div>
+      <div class="hotspot" style="top:22%;left:72%" data-feature="clip">
+        <span class="hotspot-dot"></span>
+        <div class="hotspot-card"><h4>Durable Clip</h4><p>Secure pocket clip keeps your EnerGel always within reach.</p></div>
+      </div>
+    </div>
+    <div class="pen-explorer-info" id="penExplorerInfo">
+      <span class="showcase-tag">Interactive Explorer</span>
+      <h2>Explore the<br>Pentel EnerGel</h2>
+      <p>Hover over the highlighted areas to learn about each feature of the pen.</p>
+      <div class="pen-feature-detail" id="penFeatureDetail">
+        <span class="pen-feature-name">Precision Tip</span>
+        <p class="pen-feature-desc">The needle-point tip delivers consistent ink flow for every stroke, curve, and connection you make.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCT SHOWCASE: SMOOTH INK FLOW
+     ============================================================ -->
+<section class="showcase" id="showcase-ink">
+  <div class="showcase-inner">
+    <div class="showcase-visual">
+      <div class="showcase-visual-bg flow-bg"></div>
+      <div class="showcase-decals">
+        <span class="decal-wave"></span>
+        <span class="decal-wave"></span>
+        <span class="decal-wave"></span>
+      </div>
+    </div>
+    <div class="showcase-text">
+      <span class="showcase-tag">Gel Ink Technology</span>
+      <h2>Smooth<br>Ink Flow</h2>
+      <p>The Pentel EnerGel's liquid gel ink is engineered to flow effortlessly across the page. Unlike traditional ballpoint pens that require pressure to transfer paste ink, EnerGel uses a low-viscosity formula that glides with just the weight of the pen. Every stroke is consistent, dark, and clean — from the first letter to the last.</p>
+      <ul class="showcase-metrics">
+        <li><strong>3&times;</strong><span>Smoother than standard ballpoint</span></li>
+        <li><strong>0.5&ndash;0.7mm</strong><span>Tip size for precision or boldness</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCT SHOWCASE: COMFORTABLE GRIP
+     ============================================================ -->
+<section class="showcase" id="showcase-grip">
+  <div class="showcase-inner">
+    <div class="showcase-visual">
+      <div class="showcase-visual-bg grip-bg"></div>
+      <div class="showcase-decals">
+        <span class="decal-circle"></span>
+        <span class="decal-circle"></span>
+        <span class="decal-circle"></span>
+      </div>
+    </div>
+    <div class="showcase-text">
+      <span class="showcase-tag">Ergonomic Design</span>
+      <h2>Comfortable<br>Grip</h2>
+      <p>The EnerGel&rsquo;s contoured rubber grip is designed for extended writing sessions. Its soft, tactile surface provides a natural hold that reduces hand fatigue and improves control. Whether you are taking notes, journaling, or signing documents, the grip keeps your hand comfortable and your writing consistent.</p>
+      <ul class="showcase-metrics">
+        <li><strong>40%</strong><span>Less hand fatigue vs standard pens</span></li>
+        <li><strong>Latex-free</strong><span>Hypoallergenic grip material</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCT SHOWCASE: PRECISION TIP
+     ============================================================ -->
+<section class="showcase" id="showcase-tip">
+  <div class="showcase-inner">
+    <div class="showcase-visual">
+      <div class="showcase-visual-bg tip-bg"></div>
+      <div class="showcase-decals">
+        <span class="decal-dot"></span>
+        <span class="decal-dot"></span>
+        <span class="decal-dot"></span>
+        <span class="decal-dot"></span>
+      </div>
+    </div>
+    <div class="showcase-text">
+      <span class="showcase-tag">Needle-Point Precision</span>
+      <h2>Precision<br>Tip</h2>
+      <p>Every EnerGel tip is engineered for consistent ink delivery. The needle-point design gives you exact control over every stroke, curve, and connection. Whether you prefer fine 0.5mm for detailed work or bold 0.7mm for expressive writing, the precision tip ensures every letter is sharp and well-defined.</p>
+      <ul class="showcase-metrics">
+        <li><strong>Needle-point</strong><span>Ultra-fine consistent line</span></li>
+        <li><strong>No skipping</strong><span>Reliable ink delivery every time</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCT SHOWCASE: FAST DRYING INK
+     ============================================================ -->
+<section class="showcase" id="showcase-dry">
+  <div class="showcase-inner">
+    <div class="showcase-visual">
+      <div class="showcase-visual-bg dry-bg"></div>
+      <div class="showcase-decals">
+        <span class="decal-sparkle"></span>
+        <span class="decal-sparkle"></span>
+        <span class="decal-sparkle"></span>
+      </div>
+    </div>
+    <div class="showcase-text">
+      <span class="showcase-tag">Quick-Drying Formula</span>
+      <h2>Fast Drying<br>Ink</h2>
+      <p>EnerGel&rsquo;s hybrid ink combines the smooth flow of gel with the quick-drying permanence of a ballpoint. Smudging is virtually eliminated, making it the perfect choice for left-handed writers and anyone who needs to write and move on quickly. Your words stay crisp and clean on the page.</p>
+      <ul class="showcase-metrics">
+        <li><strong>Smudge-proof</strong><span>Dries in seconds</span></li>
+        <li><strong>Left-hand friendly</strong><span>No more ink smears</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMPARISON
+     ============================================================ -->
+<section class="content" id="comparison">
+  <h2>Comparison with Other Pens</h2>
+  <ul>
+    <li>Compared to ballpoint pens, the Pentel EnerGel offers a smoother writing experience and more vibrant ink.</li>
+    <li>Compared to fountain pens, the EnerGel is more convenient and less prone to smudging, making it suitable for everyday use.</li>
+    <li>Compared to other gel pens, the EnerGel stands out for its quick-drying ink and comfortable grip, which can enhance handwriting quality.</li>
+  </ul>
+  <h3 class="subheading">Comparison of My Handwriting</h3>
+  <p style="color:#6e6e73;line-height:1.8;text-align:center;max-width:700px;margin:0 auto;">I compared my handwriting using the Pentel EnerGel with that of other pens I have used and found that it significantly improved my writing quality and reduced hand fatigue.</p>
+  <ul>
+    <li>The ink flows smoothly, reducing hand fatigue.</li>
+    <li>The quick-drying ink prevents smudging.</li>
+    <li>The comfortable grip allows for extended writing sessions.</li>
+    <li>The quality of the writing improved significantly, when compared to other pens.</li>
+  </ul>
+</section>
+
+<!-- ============================================================
+     BEFORE / AFTER HANDWRITING COMPARISON
+     ============================================================ -->
+<section class="content comparison-slider" id="comparisonSlider">
+  <h2>See the Difference</h2>
+  <p class="slider-subtitle">Drag the slider to compare before and after handwriting</p>
+
+  <div class="slider-wrapper" id="sliderWrapper">
+    <div class="slider-before">
+      <div class="slider-paper">
+        <span class="slider-label label-before">Before</span>
+        <div class="slider-sample messy">
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <p>Handwriting is an essential skill for communication.</p>
+          <p>Consistent practice leads to measurable improvement.</p>
+          <p>Every great idea begins with a single stroke.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider-after" id="sliderAfter">
+      <div class="slider-paper">
+        <span class="slider-label label-after">After</span>
+        <div class="slider-sample clean">
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <p>Handwriting is an essential skill for communication.</p>
+          <p>Consistent practice leads to measurable improvement.</p>
+          <p>Every great idea begins with a single stroke.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider-handle" id="sliderHandle">
+      <span class="slider-handle-icon"><span class="handle-arrow"></span><span class="handle-arrow"></span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HANDWRITING JOURNEY TIMELINE
+     ============================================================ -->
+<section class="content timeline-section" id="timeline">
+  <h2>Your Handwriting Journey</h2>
+  <p class="timeline-intro">From first assessment to lasting improvement &mdash; here&rsquo;s what to expect on your path to better handwriting.</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">Day 1</span>
+        <h3>Understand Your Baseline</h3>
+        <p>Write a sample paragraph, identify problem areas, and set your improvement goals. This honest assessment becomes your benchmark for the journey ahead.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">Week 1</span>
+        <h3>Build Consistency</h3>
+        <p>Focus on letter formation, proper grip, and good posture. Daily warm-ups and slow, deliberate practice begin to rewire your muscle memory.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">Week 2</span>
+        <h3>Master Spacing &amp; Slant</h3>
+        <p>Refine letter and word spacing. Improve slant consistency. Your writing starts looking cohesive, intentional, and noticeably more mature.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">Week 3</span>
+        <h3>Increase Control</h3>
+        <p>Reduce writing pressure, smooth out letter connections, and target problem letters. Speed begins to return naturally as control improves.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-date">Month 1</span>
+        <h3>Noticeable Transformation</h3>
+        <p>Compare your writing with your Day&nbsp;1 sample. The improvement is clear. Maintain your daily routine for lasting results and continued refinement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROGRESS TRACKER
+     ============================================================ -->
+<section class="content progress-section" id="progress">
+  <h2>My Improvement Checklist</h2>
+  <div class="progress-tracker">
+    <span class="progress-pct" id="progressPct">0%</span>
+    <span class="progress-tracker-label">Complete</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+  </div>
+  <ul class="progress-list" id="progressList">
+    <li data-key="practice-daily"><input type="checkbox" id="chk-practice-daily"><label for="chk-practice-daily">Practice Daily (10+ minutes)</label></li>
+    <li data-key="correct-grip"><input type="checkbox" id="chk-correct-grip"><label for="chk-correct-grip">Use Correct Pen Grip</label></li>
+    <li data-key="proper-posture"><input type="checkbox" id="chk-proper-posture"><label for="chk-proper-posture">Maintain Proper Posture</label></li>
+    <li data-key="lined-paper"><input type="checkbox" id="chk-lined-paper"><label for="chk-lined-paper">Use Lined or Grid Paper</label></li>
+    <li data-key="slow-writing"><input type="checkbox" id="chk-slow-writing"><label for="chk-slow-writing">Write Slowly and Deliberately</label></li>
+    <li data-key="letter-spacing"><input type="checkbox" id="chk-letter-spacing"><label for="chk-letter-spacing">Focus on Letter Spacing</label></li>
+    <li data-key="word-spacing"><input type="checkbox" id="chk-word-spacing"><label for="chk-word-spacing">Maintain Word Spacing</label></li>
+    <li data-key="light-pressure"><input type="checkbox" id="chk-light-pressure"><label for="chk-light-pressure">Control Writing Pressure</label></li>
+    <li data-key="consistent-slant"><input type="checkbox" id="chk-consistent-slant"><label for="chk-consistent-slant">Keep Consistent Letter Slant</label></li>
+    <li data-key="weekly-review"><input type="checkbox" id="chk-weekly-review"><label for="chk-weekly-review">Review and Analyze Progress</label></li>
+  </ul>
+</section>
+
+<!-- ============================================================
+     30-DAY HANDWRITING CHALLENGE
+     ============================================================ -->
+<section class="content challenge-section" id="challenge">
+  <h2>30-Day Handwriting Challenge</h2>
+  <p class="challenge-intro">One task per day. Complete each day to build lasting handwriting habits.</p>
+  <div class="challenge-stats">
+    <span class="challenge-day-label" id="challengeDay">Day 0 of 30</span>
+    <span class="challenge-pct" id="challengePct">0%</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="challengeFill" style="width:0%"></div>
+  </div>
+  <div class="challenge-grid" id="challengeGrid">
+    <div class="challenge-item" data-day="1"><div class="challenge-check"><input type="checkbox" id="chk-day-1"></div><div class="challenge-info"><span class="challenge-day-num">Day 1</span><span class="challenge-task">Practice your pen grip for 5 minutes</span></div></div>
+    <div class="challenge-item" data-day="2"><div class="challenge-check"><input type="checkbox" id="chk-day-2"></div><div class="challenge-info"><span class="challenge-day-num">Day 2</span><span class="challenge-task">Write the lowercase alphabet slowly</span></div></div>
+    <div class="challenge-item" data-day="3"><div class="challenge-check"><input type="checkbox" id="chk-day-3"></div><div class="challenge-info"><span class="challenge-day-num">Day 3</span><span class="challenge-task">Master the letter &lsquo;a&rsquo; &mdash; write 30 times</span></div></div>
+    <div class="challenge-item" data-day="4"><div class="challenge-check"><input type="checkbox" id="chk-day-4"></div><div class="challenge-info"><span class="challenge-day-num">Day 4</span><span class="challenge-task">Master the letter &lsquo;e&rsquo; &mdash; write 30 times</span></div></div>
+    <div class="challenge-item" data-day="5"><div class="challenge-check"><input type="checkbox" id="chk-day-5"></div><div class="challenge-info"><span class="challenge-day-num">Day 5</span><span class="challenge-task">Write for 10 minutes with perfect posture</span></div></div>
+    <div class="challenge-item" data-day="6"><div class="challenge-check"><input type="checkbox" id="chk-day-6"></div><div class="challenge-info"><span class="challenge-day-num">Day 6</span><span class="challenge-task">Practice the letter &lsquo;s&rsquo; &mdash; write 20 times</span></div></div>
+    <div class="challenge-item" data-day="7"><div class="challenge-check"><input type="checkbox" id="chk-day-7"></div><div class="challenge-info"><span class="challenge-day-num">Day 7</span><span class="challenge-task">Review your week &mdash; write a full paragraph</span></div></div>
+    <div class="challenge-item" data-day="8"><div class="challenge-check"><input type="checkbox" id="chk-day-8"></div><div class="challenge-info"><span class="challenge-day-num">Day 8</span><span class="challenge-task">Practice letter spacing with &ldquo;minimum&rdquo;</span></div></div>
+    <div class="challenge-item" data-day="9"><div class="challenge-check"><input type="checkbox" id="chk-day-9"></div><div class="challenge-info"><span class="challenge-day-num">Day 9</span><span class="challenge-task">Master the letter &lsquo;r&rsquo; &mdash; write 20 times</span></div></div>
+    <div class="challenge-item" data-day="10"><div class="challenge-check"><input type="checkbox" id="chk-day-10"></div><div class="challenge-info"><span class="challenge-day-num">Day 10</span><span class="challenge-task">Write with light pressure &mdash; let the pen glide</span></div></div>
+    <div class="challenge-item" data-day="11"><div class="challenge-check"><input type="checkbox" id="chk-day-11"></div><div class="challenge-info"><span class="challenge-day-num">Day 11</span><span class="challenge-task">Practice word spacing with 5 sentences</span></div></div>
+    <div class="challenge-item" data-day="12"><div class="challenge-check"><input type="checkbox" id="chk-day-12"></div><div class="challenge-info"><span class="challenge-day-num">Day 12</span><span class="challenge-task">Focus on your three hardest letters</span></div></div>
+    <div class="challenge-item" data-day="13"><div class="challenge-check"><input type="checkbox" id="chk-day-13"></div><div class="challenge-info"><span class="challenge-day-num">Day 13</span><span class="challenge-task">Write with consistent slant for one page</span></div></div>
+    <div class="challenge-item" data-day="14"><div class="challenge-check"><input type="checkbox" id="chk-day-14"></div><div class="challenge-info"><span class="challenge-day-num">Day 14</span><span class="challenge-task">Compare your writing with your Day 1 sample</span></div></div>
+    <div class="challenge-item" data-day="15"><div class="challenge-check"><input type="checkbox" id="chk-day-15"></div><div class="challenge-info"><span class="challenge-day-num">Day 15</span><span class="challenge-task">Practice all uppercase letters A&ndash;Z</span></div></div>
+    <div class="challenge-item" data-day="16"><div class="challenge-check"><input type="checkbox" id="chk-day-16"></div><div class="challenge-info"><span class="challenge-day-num">Day 16</span><span class="challenge-task">Write at half your normal speed</span></div></div>
+    <div class="challenge-item" data-day="17"><div class="challenge-check"><input type="checkbox" id="chk-day-17"></div><div class="challenge-info"><span class="challenge-day-num">Day 17</span><span class="challenge-task">Practice letter connections in cursive</span></div></div>
+    <div class="challenge-item" data-day="18"><div class="challenge-check"><input type="checkbox" id="chk-day-18"></div><div class="challenge-info"><span class="challenge-day-num">Day 18</span><span class="challenge-task">Write a journal entry for 15 minutes</span></div></div>
+    <div class="challenge-item" data-day="19"><div class="challenge-check"><input type="checkbox" id="chk-day-19"></div><div class="challenge-info"><span class="challenge-day-num">Day 19</span><span class="challenge-task">Analyze your writing &mdash; find 3 improvements</span></div></div>
+    <div class="challenge-item" data-day="20"><div class="challenge-check"><input type="checkbox" id="chk-day-20"></div><div class="challenge-info"><span class="challenge-day-num">Day 20</span><span class="challenge-task">Stretch before writing, then practice 15 min</span></div></div>
+    <div class="challenge-item" data-day="21"><div class="challenge-check"><input type="checkbox" id="chk-day-21"></div><div class="challenge-info"><span class="challenge-day-num">Day 21</span><span class="challenge-task">Review week 3 &mdash; take a writing sample</span></div></div>
+    <div class="challenge-item" data-day="22"><div class="challenge-check"><input type="checkbox" id="chk-day-22"></div><div class="challenge-info"><span class="challenge-day-num">Day 22</span><span class="challenge-task">Master &lsquo;f&rsquo; and &lsquo;t&rsquo; &mdash; write 20 each</span></div></div>
+    <div class="challenge-item" data-day="23"><div class="challenge-check"><input type="checkbox" id="chk-day-23"></div><div class="challenge-info"><span class="challenge-day-num">Day 23</span><span class="challenge-task">Write on grid paper for alignment</span></div></div>
+    <div class="challenge-item" data-day="24"><div class="challenge-check"><input type="checkbox" id="chk-day-24"></div><div class="challenge-info"><span class="challenge-day-num">Day 24</span><span class="challenge-task">Focus on baseline alignment throughout</span></div></div>
+    <div class="challenge-item" data-day="25"><div class="challenge-check"><input type="checkbox" id="chk-day-25"></div><div class="challenge-info"><span class="challenge-day-num">Day 25</span><span class="challenge-task">Write a letter or card for someone</span></div></div>
+    <div class="challenge-item" data-day="26"><div class="challenge-check"><input type="checkbox" id="chk-day-26"></div><div class="challenge-info"><span class="challenge-day-num">Day 26</span><span class="challenge-task">Practice numbers and common symbols</span></div></div>
+    <div class="challenge-item" data-day="27"><div class="challenge-check"><input type="checkbox" id="chk-day-27"></div><div class="challenge-info"><span class="challenge-day-num">Day 27</span><span class="challenge-task">Write at your natural pace</span></div></div>
+    <div class="challenge-item" data-day="28"><div class="challenge-check"><input type="checkbox" id="chk-day-28"></div><div class="challenge-info"><span class="challenge-day-num">Day 28</span><span class="challenge-task">Write for 20 minutes without stopping</span></div></div>
+    <div class="challenge-item" data-day="29"><div class="challenge-check"><input type="checkbox" id="chk-day-29"></div><div class="challenge-info"><span class="challenge-day-num">Day 29</span><span class="challenge-task">Final assessment &mdash; compare Day 1 vs now</span></div></div>
+    <div class="challenge-item" data-day="30"><div class="challenge-check"><input type="checkbox" id="chk-day-30"></div><div class="challenge-info"><span class="challenge-day-num">Day 30</span><span class="challenge-task">Celebrate! Plan your ongoing practice routine</span></div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRACTICE SHEET GENERATOR
+     ============================================================ -->
+<section class="content practice-section" id="practiceSheet">
+  <h2>Practice Sheet Generator</h2>
+  <p class="practice-intro">Create custom handwriting practice sheets tailored to your skill level.</p>
+  <div class="practice-controls">
+    <div class="practice-group">
+      <span class="practice-label">Type</span>
+      <div class="practice-options" id="practiceType">
+        <label class="practice-option active"><input type="radio" name="p-type" value="letters" checked> Letters</label>
+        <label class="practice-option"><input type="radio" name="p-type" value="words"> Words</label>
+        <label class="practice-option"><input type="radio" name="p-type" value="sentences"> Sentences</label>
+      </div>
+    </div>
+    <div class="practice-group">
+      <span class="practice-label">Paper</span>
+      <div class="practice-options" id="paperType">
+        <label class="practice-option active"><input type="radio" name="p-paper" value="lined" checked> Lined</label>
+        <label class="practice-option"><input type="radio" name="p-paper" value="grid"> Grid</label>
+        <label class="practice-option"><input type="radio" name="p-paper" value="dotted"> Dotted</label>
+      </div>
+    </div>
+    <div class="practice-group">
+      <span class="practice-label">Level</span>
+      <div class="practice-options" id="practiceLevel">
+        <label class="practice-option active"><input type="radio" name="p-level" value="beginner" checked> Beginner</label>
+        <label class="practice-option"><input type="radio" name="p-level" value="intermediate"> Intermediate</label>
+        <label class="practice-option"><input type="radio" name="p-level" value="advanced"> Advanced</label>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="generateSheet">Generate Practice Sheet</button>
+  </div>
+  <div class="practice-output" id="practiceOutput"></div>
+  <button class="btn btn-secondary print-btn" id="printSheet" style="display:none">Save as PDF / Print</button>
+</section>
+
+<!-- ============================================================
+     AI HANDWRITING ANALYZER
+     ============================================================ -->
+<section class="content analyzer-section" id="handwritingAnalyzer">
+  <h2>AI Handwriting Analyzer</h2>
+  <p class="analyzer-intro">Upload a sample of your handwriting for instant AI-powered analysis across four key dimensions.</p>
+  <div class="analyzer-layout">
+    <div class="analyzer-upload-col">
+      <div class="upload-zone" id="uploadZone">
+        <input type="file" id="uploadInput" accept="image/*" hidden>
+        <div class="upload-placeholder" id="uploadPlaceholder">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span class="upload-text">Drop image here or click to browse</span>
+          <span class="upload-hint">JPG, PNG, or WEBP &middot; Max 10MB</span>
+        </div>
+        <div class="upload-preview" id="uploadPreview" style="display:none">
+          <img id="analyzerImg" alt="Your handwriting sample">
+          <button class="upload-reset" id="uploadReset" aria-label="Change image"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Change</button>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="analyzeBtn" disabled>Analyze Handwriting</button>
+      <div class="analyzer-status" id="analyzerStatus"></div>
+    </div>
+    <div class="analyzer-results-col" id="analyzerResults">
+      <div class="analyzer-empty" id="analyzerEmpty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity=".3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <p>Upload an image and click <strong>Analyze</strong> to see your results</p>
+      </div>
+      <div class="analyzer-results-content" id="analyzerResultsContent" style="display:none">
+        <div class="analyzer-overall"><span class="overall-label">Overall Score</span><span class="overall-value" id="overallScore">—</span><span class="overall-max">/10</span></div>
+        <div class="analyzer-scores">
+          <div class="score-card" id="score-consistency">
+            <svg class="score-svg" viewBox="0 0 140 140"><circle class="score-bg" cx="70" cy="70" r="58"/><circle class="score-fill" cx="70" cy="70" r="58" stroke-dasharray="364.42" stroke-dashoffset="364.42" id="ring-consistency"/></svg>
+            <div class="score-info"><span class="score-value" id="val-consistency">—</span><span class="score-name">Consistency</span></div>
+          </div>
+          <div class="score-card" id="score-spacing">
+            <svg class="score-svg" viewBox="0 0 140 140"><circle class="score-bg" cx="70" cy="70" r="58"/><circle class="score-fill" cx="70" cy="70" r="58" stroke-dasharray="364.42" stroke-dashoffset="364.42" id="ring-spacing"/></svg>
+            <div class="score-info"><span class="score-value" id="val-spacing">—</span><span class="score-name">Spacing</span></div>
+          </div>
+          <div class="score-card" id="score-slant">
+            <svg class="score-svg" viewBox="0 0 140 140"><circle class="score-bg" cx="70" cy="70" r="58"/><circle class="score-fill" cx="70" cy="70" r="58" stroke-dasharray="364.42" stroke-dashoffset="364.42" id="ring-slant"/></svg>
+            <div class="score-info"><span class="score-value" id="val-slant">—</span><span class="score-name">Slant</span></div>
+          </div>
+          <div class="score-card" id="score-pressure">
+            <svg class="score-svg" viewBox="0 0 140 140"><circle class="score-bg" cx="70" cy="70" r="58"/><circle class="score-fill" cx="70" cy="70" r="58" stroke-dasharray="364.42" stroke-dashoffset="364.42" id="ring-pressure"/></svg>
+            <div class="score-info"><span class="score-value" id="val-pressure">—</span><span class="score-name">Pressure</span></div>
+          </div>
+        </div>
+        <div class="improvement-plan" id="improvementPlan" style="display:none">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Personalized Improvement Plan</h3>
+          <ul id="improvementList"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TIPS (20 complete tips preserved)
+     ============================================================ -->
+<section class="content" id="tips">
+
+  <h2>Tips for Improving Handwriting</h2>
+  <p class="tips-intro">
+    Improving handwriting is not about changing your writing overnight.
+    It is about developing consistency, control, spacing, posture,
+    and writing habits through focused practice.
+    Use the following guide as a complete roadmap.
+  </p>
+
+  <article class="tip-box" id="tip-01">
+    <div class="tip-number">Tip 01</div>
+    <h3>Practice Regularly</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Handwriting is a motor skill, not a theoretical subject. Your brain and hand need repeated, consistent practice to build what is called muscle memory. Every time you write, your brain sends signals through a complex network of nerves to the small muscles in your hand, wrist, and forearm. With repetition, these neural pathways become stronger and more efficient. Without regular practice, your handwriting will remain inconsistent because your hand never fully learns the correct movement patterns. Even five minutes of focused daily practice produces better results than an hour once a week. The Pentel EnerGel pen is an excellent tool for this because its smooth, low-friction ink allows your hand to glide across the page, reducing fatigue and making practice sessions more comfortable and productive.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Set a specific time each day for handwriting practice. Morning is ideal because your hand is rested and your mind is fresh.</li>
+        <li>Start with sessions of ten to fifteen minutes and gradually extend as your stamina improves.</li>
+        <li>Keep a dedicated practice notebook used for nothing else. This builds a psychological association with improvement.</li>
+        <li>Write slowly and deliberately. Speed is not your goal at this stage. Focus entirely on letter shape and quality.</li>
+        <li>Use your Pentel EnerGel pen for every session so your hand learns its specific feel, weight, and ink flow.</li>
+        <li>Annotate every page with the date so you can track consistency and progress over time.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write the alphabet in lowercase twice every day. The first pass should be slow and deliberate. The second pass should be at your normal conversational speed.</li>
+        <li>Compare both passes and note where speed causes your letters to break down.</li>
+        <li>Choose one sentence and write it three times daily for an entire week. Use the same sentence every day to see day-over-day improvement on the same words.</li>
+        <li>Pick a sentence that uses varied letter shapes, such as "The quick brown fox jumps over the lazy dog," which contains every letter of the alphabet.</li>
+        <li>After one week, switch to a new sentence and repeat the process.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Practicing for too long too infrequently. A two-hour session once a week fatigues your hand and reinforces sloppy habits.</li>
+        <li>Switching between different pens and papers during practice. Tool consistency is essential for building reliable muscle memory.</li>
+        <li>Skipping the slow, deliberate pass and jumping directly to speed writing. This defeats the purpose of practice.</li>
+        <li>Not dating your practice pages, which removes your ability to see progress and stay motivated.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Within two weeks of daily practice, you will notice that your hand feels more stable and your letters look more uniform. The act of writing will require less conscious effort. After one month, the improvement in legibility will be noticeable to others. After three months, the new habits will begin to feel natural and automatic. Your Pentel EnerGel will glide more smoothly because your hand pressure will have become more consistent and controlled.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-02">
+    <div class="tip-number">Tip 02</div>
+    <h3>Develop a Consistent Letter Style</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Handwriting that looks messy or immature is almost always the result of inconsistency, not lack of ability. When your letter shapes vary from one word to the next, the reader has to work hard to decipher what you have written. Consistency is what gives handwriting a polished, legible, and mature appearance. The human brain recognizes patterns, so when your letters follow the same shape every time, reading becomes effortless. By deliberately choosing a letter style and sticking to it, you train your hand to reproduce the same forms reliably. The Pentel EnerGel's consistent ink flow helps because there are no skips or blobs to disrupt your letter shapes, giving you accurate feedback about your actual form rather than your tool.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Decide whether to use print script or cursive. Print script is faster to master and more universally readable for most adults.</li>
+        <li>Choose a clean font style you like. Look at fonts like Helvetica or Futura for simple, readable letter forms.</li>
+        <li>Draw each uppercase and lowercase letter on a reference sheet and keep it beside your practice area for constant visual reminders.</li>
+        <li>Focus on the nine most frequently used English letters first: e, t, a, o, i, n, s, h, and r. Perfecting these improves the majority of your everyday writing.</li>
+        <li>Commit to one style for at least one month before considering any changes.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write the alphabet vertically. Start with lowercase a written ten times in a row, making every a look identical.</li>
+        <li>Move to b and repeat. Continue through the entire alphabet. The goal is near-identical repetition, not speed.</li>
+        <li>Pick three letters you find difficult and write them fifty times each. Common trouble spots are a, e, r, and s.</li>
+        <li>Write five words that contain your difficult letters. For example, if a is hard, write about, after, apple, able, and again.</li>
+        <li>Compare the first and last occurrence of your target letter in each word to check for consistency.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Copying a font that is too decorative or complex for everyday writing. Flourishes look beautiful but are impractical for notes and forms.</li>
+        <li>Changing letter styles mid-practice. Commit to one style for at least one month before switching.</li>
+        <li>Neglecting uppercase letters. Inconsistent capitals stand out dramatically and make writing look unpolished.</li>
+        <li>Forgetting that consistency includes size, not just shape. A consistent letter at the wrong size still looks messy.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>After one week of focused letter-style practice, you will see greater uniformity within individual letters. After one month, entire words will start to look cohesive. After two months, you will not need to think about letter shapes consciously because your hand will have memorized the forms. Your everyday notes will begin to look intentional and designed rather than hurried and chaotic.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-03">
+    <div class="tip-number">Tip 03</div>
+    <h3>Use the Correct Pen Grip</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>The way you hold your pen directly controls the quality of your handwriting. A poor grip causes tension, fatigue, and erratic letter shapes. Most people grip their pen too tightly, using the death grip, which locks the fingers and forces the whole arm to do the work of writing. This leads to soreness after short periods and jagged, uneven letter strokes. A proper grip uses the tripod hold, where the pen rests between your thumb and index finger and is supported by the middle finger. This grip gives you maximum control with minimum effort. The Pentel EnerGel's rubber grip area is designed to encourage a relaxed hold, and its low-viscosity ink reduces the need for downward pressure. If you grip too hard with this pen, you will actually feel more vibration through the barrel, giving you real-time feedback that you are squeezing.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Rest the Pentel EnerGel on the side of your middle finger, about one-third up from the tip.</li>
+        <li>Place your index finger on top of the barrel and your thumb opposite your index finger. This is the tripod grip.</li>
+        <li>Keep your grip light. Imagine holding a small bird that you do not want to hurt.</li>
+        <li>Keep your fingers slightly curved, not straight or locked. The pen should point toward your shoulder.</li>
+        <li>Apply just enough pressure for the ink to flow. The EnerGel is designed to write with minimal pressure.</li>
+        <li>Keep your wrist straight. Let your fingers and forearm do the movement, not your wrist.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Take a blank sheet of paper and draw continuous loops without lifting the pen. Draw clockwise loops for one minute.</li>
+        <li>Switch to counterclockwise loops for one minute. Focus on keeping your grip relaxed throughout.</li>
+        <li>If you feel your fingers tightening, stop, shake your hand out, and start again.</li>
+        <li>Write the word minimum repeatedly for two minutes. Its repeating vertical strokes expose any grip-induced shakiness.</li>
+        <li>Check your hand. If your fingertips are white or your hand cramps, you are gripping too hard.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Holding the pen too close to the tip, which blocks your view of what you are writing and makes you hunch over.</li>
+        <li>Using the index finger to press down with excessive force, creating a tremor in downward strokes.</li>
+        <li>Resting the pen on your ring finger instead of your middle finger, which reduces stability.</li>
+        <li>Gripping so tightly that your thumb joint bends backward. This signals severe tension and must be corrected.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>When you correct your grip, you will notice an immediate reduction in hand fatigue. Within a few days, your letter shapes will become smoother and more consistent because your fingers can move freely. After two weeks, the new grip will start to feel natural, and you will write for longer periods without discomfort. The smooth flow of the Pentel EnerGel will be more noticeable because you are no longer fighting against your own grip tension.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-04">
+    <div class="tip-number">Tip 04</div>
+    <h3>Choose the Right Pen and Paper</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Your handwriting is only as good as the tools you use. Writing with a poor-quality pen on unsuitable paper is like trying to paint a detailed portrait with a house brush on sandpaper. The wrong combination can cause ink bleeding, skipping, feathering, and excessive friction that forces your hand to work harder. The Pentel EnerGel is widely considered one of the best pens for handwriting improvement because it uses a hybrid ink that combines the smooth flow of a gel pen with the quick-drying permanence of a ballpoint. This means your strokes are clean, dark, and consistent without smudging. However, even the best pen needs the right paper to perform optimally. Paper that is too smooth will not provide enough friction for control, while paper that is too rough will catch the pen tip and create jagged lines.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Choose a tip size between 0.5 mm and 0.7 mm. A 0.5 mm tip forces precision; a 0.7 mm tip gives bolder, more readable lines.</li>
+        <li>Test both sizes with your Pentel EnerGel and pick the one that feels most comfortable.</li>
+        <li>Select notebooks with at least 90 gsm paper weight to prevent bleed-through and ghosting.</li>
+        <li>Look for smooth but not glossy paper. Clairefontaine, Rhodia, and Leuchtturm are excellent choices.</li>
+        <li>Before committing to a notebook, test your pen on a page and check the back for bleed-through.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Take three different types of paper and a single Pentel EnerGel pen. Write the same sentence on each.</li>
+        <li>Examine the results under good lighting. Look for feathering, ghosting, and skipping.</li>
+        <li>Choose the paper that gives you the cleanest lines and smoothest writing feel.</li>
+        <li>Do the reverse test: take three different pens and one high-quality paper. Write the alphabet with each.</li>
+        <li>The Pentel EnerGel should produce the darkest, smoothest, and most consistent line. Use this combination for all your practice.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Using cheap copy paper for practice. It is too thin and absorbent, causing ink to bleed and feather.</li>
+        <li>Using pens with very fine tips like 0.38 mm or 0.3 mm. These are scratchy and require more pressure, causing fatigue.</li>
+        <li>Using pens that are running out of ink, which causes skipping and forces you to press harder.</li>
+        <li>Writing on glossy or coated paper, which causes gel ink to smear.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>When you switch to the right pen and paper combination, you will see an immediate improvement in your handwriting quality. Lines will be darker, shapes will be cleaner, and your hand will feel less fatigued. Within a few sessions, you will wonder how you ever wrote with inferior tools. The consistency of your ink flow will help you see exactly where your letter formation needs work, without the distraction of tool-related issues.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-05">
+    <div class="tip-number">Tip 05</div>
+    <h3>Maintain Proper Posture</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Posture is the foundation of good handwriting, yet it is the most overlooked factor. Your entire arm, from your shoulder to your fingertips, is a connected system. If your spine is twisted, your shoulders uneven, or your neck craned forward, the tension travels down your arm and into your hand. This tension manifests as shaky lines, cramped letters, and rapid fatigue. Proper posture aligns your skeletal structure so that your muscles can work efficiently. When you sit correctly, your arm moves freely from the shoulder, your wrist stays straight, and your fingers make precise micro-adjustments without interference from upper-body tension. The Pentel EnerGel's lightweight design helps reduce the strain that poor posture can amplify.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Sit with your feet flat on the floor and your knees at a ninety-degree angle. Your hips should be pushed back for lower back support.</li>
+        <li>Place your forearms on the desk at a ninety-degree angle at your elbows. The desk should be at or just below elbow height.</li>
+        <li>Angle your paper thirty degrees to the left if right-handed, or thirty degrees to the right if left-handed.</li>
+        <li>Keep your non-writing hand flat on the paper to stabilize it as you write.</li>
+        <li>Look straight ahead at your paper, not down from the side. Your neck should be straight, not craned forward.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Sit at your desk and close your eyes. Take three deep breaths and notice how your body feels.</li>
+        <li>Check your shoulders, neck, and feet. Adjust everything to the correct position described above.</li>
+        <li>Open your eyes and write a full paragraph without changing your posture.</li>
+        <li>Midway through, pause and check your body again. Most people will have unconsciously slumped.</li>
+        <li>Practice this awareness exercise daily for one week. Write "Shoulders back, feet flat, paper angled" at the top of each practice page as a reminder.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Hunching forward to see the paper more closely. This compresses your chest and restricts breathing.</li>
+        <li>Crossing your legs while writing, which twists your pelvis and misaligns your spine.</li>
+        <li>Resting your writing forearm on the edge of the desk, which cuts off circulation.</li>
+        <li>Holding the paper straight instead of angling it, which forces your wrist into an unnatural position.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Correcting your posture produces an immediate improvement in writing smoothness. Your lines will become steadier and your letters more uniform because your arm is moving freely rather than fighting against tension. After one week of conscious posture practice, you will notice significantly less hand fatigue during long writing sessions. After one month, good posture will become automatic, and you will be able to write comfortably for extended periods.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-06">
+    <div class="tip-number">Tip 06</div>
+    <h3>Improve Letter Spacing</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Letter spacing is the distance between individual letters within a word. When letter spacing is uneven, words become difficult to read even if each letter is well-formed. Some letters will appear to merge together while others float apart. Correct letter spacing gives words a cohesive, professional appearance. The human eye reads groups of letters as whole words, so when spacing is consistent, recognition is instantaneous. When spacing is erratic, the brain has to work harder to parse each word, slowing down reading and creating a sense of messiness. Improving letter spacing is one of the fastest ways to make your handwriting look significantly better because it addresses the overall texture of your writing rather than individual letter shapes.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Follow the general rule: space between letters should be approximately the width of a single lowercase n.</li>
+        <li>Narrow letters like i and l need slightly less space. Wide letters like m and w need slightly more.</li>
+        <li>Write words and consciously check the gaps between each letter for consistency.</li>
+        <li>Imagine each letter is inside an invisible box. These boxes should barely touch without overlapping.</li>
+        <li>Use the Pentel EnerGel's fine line to see the edges of each letter clearly for accurate spacing judgment.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write the word "handwriting" on lined paper. Below it, draw a vertical line after every letter to make spacing visible.</li>
+        <li>Write the word again, keeping each letter within its own column. All columns should be equal in width.</li>
+        <li>Repeat this with five different words each day for one week.</li>
+        <li>Practice writing the letter pair "oo" until the space between them looks even and natural.</li>
+        <li>Repeat with "nn", "mm", "ii", and "ll". Mastering these pairs improves spacing across all letters.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Treating all letters as if they need the same spacing. Letters like i and l need less space than m and w.</li>
+        <li>Leaving too much space inside round letters like o, a, and d, making them look like the letter c with a line.</li>
+        <li>Crowding letters toward the end of a word as you run out of space or rush to finish.</li>
+        <li>Ignoring the exit stroke of one letter and the entry stroke of the next in cursive writing.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Focused letter-spacing practice produces visible improvement within a single session. After three days, your words will look more cohesive and professional. After one week, the improvement will be obvious to anyone who sees your writing. Your handwriting will appear cleaner and more mature without any change to your actual letter shapes. This is one of the highest-ROI improvements you can make.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-07">
+    <div class="tip-number">Tip 07</div>
+    <h3>Improve Word Spacing</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Word spacing is the gap between separate words. It is different from letter spacing, and it serves a completely different purpose. Letter spacing helps individual words look cohesive. Word spacing helps entire sentences and paragraphs become readable. When word spacing is too small, words run together and the reader cannot tell where one word ends and the next begins. When word spacing is too large, the sentence breaks apart into isolated words and loses its rhythm. Correct word spacing creates a visual rhythm that guides the reader smoothly from left to right. Inconsistent word spacing is one of the most common signs of unpolished handwriting and is immediately noticeable even to untrained eyes.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Keep word spacing approximately the width of one lowercase n in your handwriting.</li>
+        <li>Write a sentence and look at the negative space between words. All gaps should look roughly equal.</li>
+        <li>Imagine placing an invisible letter n between every word. If it fits, spacing is correct. If squeezed, too tight. If room for more, too loose.</li>
+        <li>Use the Pentel EnerGel's smooth flow to focus on spacing without worrying about the tool.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write the sentence "I love improving my handwriting with my Pentel EnerGel pen."</li>
+        <li>Go back and draw a small dot in the space between each word. The dots should be evenly spaced.</li>
+        <li>If they are not evenly spaced, rewrite the sentence and consciously adjust the gaps.</li>
+        <li>Repeat with five different sentences each day.</li>
+        <li>Copy a paragraph from a book, paying attention only to the spaces between words. Measure the largest and smallest gap and reduce the difference over time.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Confusing letter spacing with word spacing. Word spacing is much larger and serves a different purpose.</li>
+        <li>Leaving too little space between short words like a, an, and the, causing them to attach to the following word.</li>
+        <li>Increasing word spacing near the end of a line, leaving a large white gap before the margin.</li>
+        <li>Applying inconsistent spacing based on word length. All gaps should be equal regardless of word length.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Improved word spacing transforms the overall look of your handwriting more than almost any other single change. Within a few days of practice, your paragraphs will look airy, organized, and professional. Readers will comment that your handwriting looks neater even if your individual letter shapes have not changed. After two weeks, consistent word spacing will become automatic, and you will no longer need to think about it consciously.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-08">
+    <div class="tip-number">Tip 08</div>
+    <h3>Control Writing Pressure</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Writing pressure is the amount of force you apply to the pen tip against the paper. Most people apply far too much pressure, which causes several problems. Heavy pressure flattens the pen tip, creates grooves in the paper that show on the other side, slows down your writing speed, and causes rapid hand fatigue. It also produces thicker, less controlled lines that can look smudged or blobby. The Pentel EnerGel is specifically designed to write with minimal pressure. Its low-viscosity liquid gel ink flows freely with just the weight of the pen itself. If you are pressing down significantly, you are working against the pen's design. Light pressure gives you finer control over letter shapes, smoother lines, and the ability to write for longer periods without discomfort.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Hold the Pentel EnerGel as lightly as possible. Imagine holding a dry leaf that you do not want to crush.</li>
+        <li>Write with just the weight of the pen, without adding extra downward force from your fingers or wrist.</li>
+        <li>Check the back of your paper after writing. If you can feel ridges, you are pressing too hard.</li>
+        <li>Listen to your writing sound. Scratching means too much pressure. A smooth, quiet glide means correct pressure.</li>
+        <li>Trust the EnerGel ink. It is designed to flow at the lightest touch. Let the pen do the work.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Place a piece of paper on top of a soft surface like a magazine. Write the alphabet. The soft surface forces you to lighten your pressure.</li>
+        <li>Practice on a soft surface for one week, then switch back to a hard desk. Notice how much lighter your natural pressure has become.</li>
+        <li>Write the same sentence five times, decreasing your pressure each time. The first version should be your normal pressure.</li>
+        <li>Make the fifth version the lightest pressure you can possibly apply. Compare line quality between the first and fifth versions.</li>
+        <li>The fifth version should look smoother and more controlled. This is your target pressure.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Believing that more pressure gives more control. The opposite is true. Heavy pressure locks your hand muscles.</li>
+        <li>Gripping the pen tighter to compensate for light pressure. Tension in the grip creates heavier pressure.</li>
+        <li>Increasing pressure on downstrokes and decreasing on upstrokes. With the EnerGel, all strokes should be the same thickness.</li>
+        <li>Writing on a soft surface without a backing sheet, causing the pen to dig in and tear the paper.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Reducing writing pressure produces immediate benefits. Your hand will feel less tired after even a short writing session. Your lines will become smoother and more consistent because your hand can move freely. After one week of light-pressure practice, your handwriting will look lighter, cleaner, and more controlled. After one month, light pressure will become your new normal, and you will wonder how you ever wrote with so much force.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-09">
+    <div class="tip-number">Tip 09</div>
+    <h3>Slow Down Before Increasing Speed</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Nearly every adult with messy handwriting writes too fast. Speed is the enemy of precision. When you write quickly, your brain cannot send precise enough signals to your hand muscles to form accurate letter shapes. The result is slanted, uneven, and poorly formed letters that barely resemble the intended shapes. The natural instinct is to think that you need to learn to write faster while keeping your handwriting neat. But the real path is the opposite. You must first learn to write slowly and well, and then speed will come naturally as your muscle memory develops. The Pentel EnerGel's smooth flow encourages a more deliberate pace because the tactile feedback is so pleasant that you will naturally want to savor the writing experience rather than rush through it.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Determine your comfortable writing speed by having someone time you writing a sentence at your normal pace.</li>
+        <li>Write the same sentence at half that speed. The second version should look noticeably better, proving speed is what holds you back.</li>
+        <li>During practice, write at a pace that feels uncomfortably slow. Each letter should take about one full second to form.</li>
+        <li>As your letters become more consistent at slow speed, increase your speed by ten percent each week.</li>
+        <li>Trust the Pentel EnerGel's smooth flow to encourage a more deliberate, enjoyable pace.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write the number 1 above the first letter of each word. Every time you lift your pen, count one second before starting the next letter.</li>
+        <li>Practice this one-second pause for ten minutes each day to train your brain to plan ahead.</li>
+        <li>Write a sentence and circle every poorly formed letter. If you find more than two or three, you are writing too fast.</li>
+        <li>Slow down until you can write an entire sentence with no circled letters.</li>
+        <li>Over time, your comfortable speed will increase naturally as muscle memory handles letter forms automatically.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Trying to write at full speed during practice sessions. Practice is for slow, deliberate improvement.</li>
+        <li>Rushing through warm-up exercises. Warm-ups should be even slower than your main practice.</li>
+        <li>Becoming impatient after a few weeks of slow practice and jumping back to normal speed, which brings back old habits.</li>
+        <li>Slowing down for individual letters but speeding up between letters, creating uneven pacing within words.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>After one week of deliberate slow practice, your handwriting quality will improve dramatically because every letter is receiving full attention. After one month, you will notice that your natural writing speed has increased slightly without sacrificing quality. After three months, your comfortable writing speed will be faster than your original speed, but your handwriting will look significantly better. The slow-down approach produces lasting improvement that speed-first approaches cannot match.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-10">
+    <div class="tip-number">Tip 10</div>
+    <h3>Use Lined or Grid Paper</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Blank paper offers no guidance for size, spacing, or alignment. Even experienced writers struggle to maintain consistent letter sizes and straight lines on blank paper. Lined paper gives you a baseline to anchor your letters. The bottom line tells you where each letter should sit, and the height of the line space tells you how tall your letters should be. Grid paper goes even further by adding vertical lines that help with letter spacing and margins. For handwriting improvement, guides are not cheating. They are training wheels that teach your hand the correct proportions. Over time, you can graduate to blank paper, but during the learning phase, lined or grid paper accelerates your progress dramatically. The Pentel EnerGel's clear, dark line makes it easy to see where your letters fall in relation to the guide lines.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Choose paper with lines 8 mm apart, standard for handwriting notebooks. This gives room for ascenders and descenders.</li>
+        <li>Your lowercase letters should fill half the line height. Uppercase letters and ascenders should reach nearly to the top line.</li>
+        <li>Descenders like g and y should drop below the baseline to the bottom line.</li>
+        <li>Check every three or four words that your letters are sitting on the baseline, not floating above or sinking below.</li>
+        <li>For grid paper, let each letter occupy roughly one square. Use vertical lines to guide spacing.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write a sentence on lined paper. Circle any letters floating above or punching through the baseline.</li>
+        <li>Rewrite the sentence with every letter sitting precisely on the line. Repeat for five sentences each day.</li>
+        <li>On grid paper, write the alphabet with one letter per grid square. This trains consistent size.</li>
+        <li>Write words with one letter per square. This trains consistent spacing and size simultaneously.</li>
+        <li>After two weeks of grid practice, switch to regular lined paper and notice how much more consistent your letters have become.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Ignoring the top line and allowing all letters to become the same height, destroying uppercase and lowercase distinction.</li>
+        <li>Using narrow-ruled paper meant for small handwriting, which forces letters into cramped, illegible shapes.</li>
+        <li>Allowing descenders from the line above to interfere with ascenders on the current line.</li>
+        <li>Using the lines passively rather than actively. Check your alignment frequently.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Using lined paper produces an immediate improvement in letter size consistency and baseline alignment. After one week, your letters will be more uniform in height and will sit correctly on the line. After one month, the baseline awareness will become automatic, and your handwriting will look significantly more organized even when you are not thinking about it. Grid paper users will see additional improvements in spacing consistency.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-11">
+    <div class="tip-number">Tip 11</div>
+    <h3>Practice Difficult Letters Separately</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Not all letters are equally difficult. Some letters require complex stroke sequences, subtle curves, or precise proportions that take longer to master. Trying to improve all twenty-six letters at once dilutes your focus and slows down overall progress. Every person has specific problem letters that consistently look worse than the rest. By identifying these weak spots and giving them concentrated practice, you improve the overall quality of your handwriting much faster than spreading your attention evenly across the alphabet. Common problem letters are lowercase a, e, r, s, and uppercase G, S, and Z. The Pentel EnerGel's precise tip allows you to see exactly where your stroke goes wrong on these difficult letters, turning each attempt into diagnostic data.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Write a full paragraph of your normal handwriting and circle every poorly formed letter.</li>
+        <li>Count how many times each circled letter appears. The letters with the highest count are your problem letters.</li>
+        <li>Spend the first five minutes of each practice session working exclusively on these problem letters.</li>
+        <li>Write each problem letter in isolation fifty times, then in words like about, after, apple, able, and agree for the letter a.</li>
+        <li>Focus on the transition into and out of the problem letter within each word for smooth integration.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Create a personal error log with three columns: problem letter, what goes wrong, and the correct form.</li>
+        <li>For example, lowercase a might look like o with a line, or s might look like an unfinished figure eight.</li>
+        <li>Review this log before every practice session to keep your weak areas top of mind.</li>
+        <li>After one week, write the same paragraph and compare circled letters to your original count.</li>
+        <li>Repeat with new problem letters each month until all letters are satisfactory.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Practicing difficult letters in isolation and never testing them in real words where they may fall apart.</li>
+        <li>Choosing too many problem letters at once. Focus on no more than three letters per week.</li>
+        <li>Ignoring uppercase letters. An inconsistent uppercase G or S stands out dramatically.</li>
+        <li>Not analyzing why a letter is difficult. Understanding the specific flaw is more helpful than vague repetition.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Targeted practice produces rapid improvement in specific weak areas. After one week of focused practice on three problem letters, those letters will look noticeably better in your everyday writing. After one month, the improvement will be obvious, and you will have three fewer weak spots in your handwriting. Over several months, systematic letter-by-letter improvement will transform your entire alphabet. Each letter you master permanently raises the overall quality of your handwriting.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-12">
+    <div class="tip-number">Tip 12</div>
+    <h3>Improve Slant Consistency</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Slant is the angle at which your letters lean. Inconsistent slant is one of the easiest ways to spot untrained handwriting. When some letters lean to the right, others stand straight up, and a few lean to the left, the writing looks chaotic and unstable. The human brain expects a consistent angle of attack for reading. When the slant varies, the reader has to constantly adjust their visual processing, which creates a subconscious sense of discomfort even if they cannot pinpoint why. A consistent slant gives handwriting a unified, rhythmic flow that looks professional and intentional. It also makes your writing look faster and more confident because the consistent angle creates a sense of forward momentum across the page.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Decide on a target slant. Right-handed writers: five to fifteen degrees forward. Left-handed: straight or slight backward slant.</li>
+        <li>Draw slant lines on paper using a ruler at your chosen angle, spaced about an inch apart.</li>
+        <li>Place this guide sheet underneath your practice paper. The lines will show through as a visible target.</li>
+        <li>Write slowly and align your vertical strokes with the guide lines. Letters b, d, f, h, k, l, and t are excellent for practice.</li>
+        <li>Check slant at both the beginning and end of each line, as arm position shifts while writing across the page.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write a row of the letter l, then a row of t, then a row of h. Focus on making every vertical stroke parallel.</li>
+        <li>Hold your paper at eye level and look along the strokes. Non-parallel strokes will be immediately apparent.</li>
+        <li>Write the word minimum repeatedly. Every stroke is vertical, making any slant inconsistency glaringly obvious.</li>
+        <li>Once vertical strokes are mastered, practice curved letters like a, d, g, and q, ensuring curves follow the same slant.</li>
+        <li>Compare the slant of your first word on a line to your last word and adjust your arm position to maintain consistency.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Trying to force a slant that is unnatural for your hand position. If right-handed, your slant should lean right.</li>
+        <li>Only checking slant on tall letters while ignoring short ones like a, c, and e. Slant must apply to all letters.</li>
+        <li>Writing with a different slant at the start versus the end of a line as arm position shifts.</li>
+        <li>Rotating the paper instead of adjusting your hand to achieve the correct slant, which disrupts posture and letter formation.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Slant improvement produces a dramatic and immediate visual upgrade to your handwriting. Within a few sessions, your writing will look more cohesive and professional because all the letters are leaning in the same direction. After one week of slant practice, the overall texture of your writing will be noticeably more unified. After one month, consistent slant will be automatic, and your handwriting will have a rhythmic, flowing quality that it previously lacked.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-13">
+    <div class="tip-number">Tip 13</div>
+    <h3>Stretch Your Hands</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Writing is a repetitive fine-motor activity that puts significant strain on the small muscles of the hand, wrist, and forearm. Without regular stretching, these muscles become tight, fatigued, and prone to cramping. Tight muscles cannot perform precise movements, which means your handwriting quality degrades as you write. Stretching increases blood flow to the muscles, removes metabolic waste products that cause soreness, and maintains the range of motion needed for fluid writing. Professional musicians stretch their hands before every practice session. Calligraphers do the same. If you want your handwriting to reach its full potential, you must treat your hands with the same respect. The Pentel EnerGel's light weight helps reduce strain, but it cannot replace proper hand care.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Before every practice session, spend two minutes doing hand stretches.</li>
+        <li>Spread your fingers wide for five seconds, then make a tight fist for five seconds. Repeat five times.</li>
+        <li>Extend your arm with palm up and gently pull fingers back toward the floor. Hold for fifteen seconds.</li>
+        <li>Flip your palm down and gently push fingers toward the floor. Hold for fifteen seconds.</li>
+        <li>Shake out your hands for ten seconds. Also stretch mid-session if writing for more than twenty minutes.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Set a timer for ten minutes of writing. Every two minutes when the timer beeps, stop and do a five-second hand stretch.</li>
+        <li>This interval training keeps hands loose throughout practice and prevents tension from building up gradually.</li>
+        <li>After ten minutes, spend one minute doing all the stretches described above.</li>
+        <li>Note how your handwriting quality changes from the first two minutes to the last two minutes.</li>
+        <li>Write the word "STRETCH" at the top of your practice page as a reminder using your Pentel EnerGel.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Only stretching after your hand already hurts. By then, muscles have already tightened and handwriting quality has degraded.</li>
+        <li>Stretching too aggressively and pulling or straining muscles. Stretches should be gentle and never painful.</li>
+        <li>Ignoring your forearms and only stretching fingers. Forearm tension is a major contributor to hand fatigue.</li>
+        <li>Bouncing or jerking during stretches. Hold the stretch steadily and breathe normally.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Regular stretching reduces hand fatigue by fifty percent or more within the first week. Your handwriting quality will remain consistent throughout longer writing sessions instead of degrading after the first few minutes. After one month of regular stretching, your hand stamina will increase noticeably. You will be able to write for thirty to forty-five minutes without discomfort. After three months, stretching will be an automatic pre-writing habit, and the improved blood flow and flexibility will contribute to smoother, more controlled letter formation.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-14">
+    <div class="tip-number">Tip 14</div>
+    <h3>Reduce Hand Fatigue</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Hand fatigue is the primary reason most people give up on handwriting improvement. When your hand aches after ten minutes of practice, it is very difficult to stay motivated. Fatigue also directly degrades handwriting quality. As your muscles tire, your grip tightens, your pressure increases, and your letter shapes become erratic. The downward spiral is predictable. Writing becomes uncomfortable, so you avoid it. Avoiding practice means you do not improve. Not improving means you lose motivation. Breaking this cycle requires a systematic approach to reducing the physical demands of writing. The Pentel EnerGel is an excellent tool for fatigue reduction because its low-viscosity ink requires minimal pressure, its rubber grip provides a comfortable contact surface, and its lightweight barrel reduces the workload on your hand muscles.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Examine your grip pressure. If you have indentations on your middle finger after writing, you are gripping too hard.</li>
+        <li>Check your downward pressure. You should not be able to feel the letters on the back of the paper.</li>
+        <li>Use your whole arm to write, not just your fingers. Move from the shoulder and let fingers make micro-adjustments.</li>
+        <li>Take breaks every ten minutes. Put the pen down for thirty seconds and shake out your hand.</li>
+        <li>Build up gradually. Increase practice duration by five minutes per week, not all at once.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write for exactly ten minutes at your normal pace. Rate your hand fatigue on a scale of one to ten.</li>
+        <li>Write this number in your practice notebook each day. Try to reduce it using lighter pressure, better posture, and more breaks.</li>
+        <li>Over two weeks, watch the number decrease even as your practice duration increases.</li>
+        <li>Alternate between one minute of writing and thirty seconds of shaking out your hand.</li>
+        <li>This interval approach trains your hand to relax during writing rather than accumulating tension.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Ignoring early signs of fatigue and pushing through the pain. Pain signals bad technique and reinforces bad habits.</li>
+        <li>Using a pen that requires high pressure, like a cheap ballpoint. These force your hand to work harder.</li>
+        <li>Neglecting to adjust your grip during long sessions. Most people start relaxed and gradually tighten without noticing.</li>
+        <li>Writing on an uneven surface that forces your hand to compensate for lack of support.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>With proper fatigue management, you will be able to double your practice duration within two weeks. Your handwriting quality will remain consistent from the first word to the last word of each session. After one month, writing for thirty minutes without discomfort will be achievable. Reduced fatigue also means you will look forward to practice rather than dreading it, which is essential for long-term improvement.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-15">
+    <div class="tip-number">Tip 15</div>
+    <h3>Seek Feedback</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>It is very difficult to evaluate your own handwriting objectively. You have been reading your own writing for years, so your brain has learned to decode it even when it is poorly formed. This means you often cannot see the flaws that are obvious to a fresh pair of eyes. Feedback from others reveals blind spots that you would never notice on your own. A friend, family member, or colleague can point out specific issues like illegible letters, inconsistent spacing, or awkward slants that you have been unconsciously overlooking. Feedback also provides accountability and motivation. When someone else is tracking your progress, you are more likely to stay consistent with your practice. The Pentel EnerGel produces such clean, dark writing that your samples will be easy for others to read and evaluate.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Ask one or two trusted people to evaluate your handwriting. Provide both a normal sample and a slow, careful sample.</li>
+        <li>Ask them to circle any letters or words that are difficult to read and identify the three most noticeable issues.</li>
+        <li>Ask specific questions: Is spacing too large or too small? Do any letters look the same? Is it easy to read at normal pace?</li>
+        <li>Write down their feedback without getting defensive. Incorporate one or two suggestions into the following week of practice.</li>
+        <li>After one week, show them a new sample and ask if they see improvement. Repeat this feedback loop monthly.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Write a paragraph about a neutral topic like your morning routine. Do not try to write neatly. Write as you normally would.</li>
+        <li>Give this paragraph to your feedback partner and ask them to read it aloud. Note every word they hesitate on or misread.</li>
+        <li>These hesitation points are your priority problem areas.</li>
+        <li>After one month of practice, write the same paragraph again and repeat the read-aloud test.</li>
+        <li>The number of hesitations and misread words should decrease significantly, providing objective proof of improvement.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Only seeking feedback from people who are too polite to give honest criticism. Choose someone who will be direct.</li>
+        <li>Asking too many people for feedback and getting conflicting advice. Stick to one or two trusted evaluators.</li>
+        <li>Ignoring feedback you do not understand or agree with. Ask for more specifics if needed.</li>
+        <li>Seeking feedback too infrequently. Monthly check-ins are ideal. Weekly is too frequent, quarterly is too rare.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>After your first feedback session, you will have a clear list of specific areas to work on, which makes your practice much more targeted and efficient. After one month of incorporating feedback, your handwriting will be noticeably more legible to others. After three months, the feedback loop will have helped you correct blind spots that could have taken years to identify on your own. Your confidence will also increase because you have external validation that you are improving.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-16">
+    <div class="tip-number">Tip 16</div>
+    <h3>Track Your Progress</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Handwriting improvement is gradual. Day to day, the changes are too small to notice. Without a tracking system, you will feel like you are not making progress, even when you are. This perception gap is the most common reason people quit. Tracking gives you objective evidence of improvement that keeps you motivated during the inevitable plateaus. It also helps you identify what is working and what is not. If you have been practicing letter spacing for two weeks and see no improvement in your tracking data, you need to change your approach. A notebook dedicated to progress tracking becomes a visual record of your journey. The Pentel EnerGel's archival-quality ink ensures that your progress records will not fade over time, so you can look back at your earliest samples years later.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Create a progress page in your practice notebook. Date every page you write without exception.</li>
+        <li>At the end of each week, rate your handwriting on three scales from one to ten: legibility, consistency, and comfort.</li>
+        <li>Write these three numbers at the bottom of your last practice page of the week.</li>
+        <li>After one month, compare your earliest scores to your current scores. The numbers will prove improvement even when your daily perception says otherwise.</li>
+        <li>Write a sample sentence at the beginning of every month and store it in a separate section of your notebook for month-over-month comparison.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Take a selfie of your handwriting every Friday using the same sentence each week.</li>
+        <li>Use the sentence: "I am improving my handwriting one letter at a time with consistent daily practice."</li>
+        <li>Arrange these photos in a folder on your phone or computer in chronological order.</li>
+        <li>After four weeks, look at the first image and the fourth image side by side. The improvement will be undeniable.</li>
+        <li>Share your progress photos with your feedback partner for additional accountability and motivation.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Not dating your practice pages. Without dates, you cannot reconstruct your improvement timeline.</li>
+        <li>Comparing your progress to someone else's. Handwriting improvement is highly individual and comparisons are misleading.</li>
+        <li>Throwing away early samples because you are embarrassed by them. Early samples are the most valuable records of how far you have come.</li>
+        <li>Only tracking on good days. Track every session, including bad ones. The bad days make the good days more meaningful.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Within two weeks of tracking, you will have clear evidence that you are improving, which will boost your motivation significantly. After one month, your tracking data will reveal patterns, such as which days of the week your handwriting is best and which specific letters are improving most slowly. After three months, you will have a detailed record of your entire improvement journey that you can look back on with pride. The act of tracking itself reinforces your commitment to improvement.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-17">
+    <div class="tip-number">Tip 17</div>
+    <h3>Analyze Your Handwriting</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>You cannot fix what you do not understand. Analyzing your handwriting systematically reveals the specific patterns and habits that are holding you back. It transforms handwriting improvement from a vague goal into a precise engineering problem. Instead of feeling like your handwriting is generally bad, you will see that your lowercase e is too closed, your word spacing is too large, and your slant varies by ten degrees. These are specific, solvable problems. Analysis takes the emotion out of the process. You stop criticizing yourself and start diagnosing your writing the way a mechanic diagnoses an engine. The Pentel EnerGel's crisp, clean line makes analysis easier because there is no ink bleeding or skipping to confuse the diagnosis.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Once per week, take a page from your practice notebook that represents your average writing, not your best or worst.</li>
+        <li>Ask four questions: Is the baseline consistent? Is letter height consistent? Is spacing even? Is slant uniform?</li>
+        <li>Write down observations for each question and rank your writing from one to ten on each dimension.</li>
+        <li>Draw a horizontal line across the top of your lowercase letters to check height consistency.</li>
+        <li>Choose a vertical stroke from the beginning, middle, and end of a line and compare their angles for slant consistency.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Take one sentence from your weekly sample and trace over it with a colored pen or pencil.</li>
+        <li>Use a ruler to extend the baseline across the page. Extend the top line of your lowercase letters.</li>
+        <li>Draw vertical lines along the main strokes of several letters. This overlay makes every inconsistency jump off the page.</li>
+        <li>Count how many letters break the baseline, how many are too tall or too short, and how many strokes deviate from the average slant.</li>
+        <li>Write these counts in your progress notebook. Each week, try to reduce every count. This turns subjective feelings into objective data.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Being overly critical and focusing only on flaws. Analysis should be balanced. Also note what is working well.</li>
+        <li>Analyzing too frequently. Weekly analysis is sufficient. Daily analysis creates noise from normal day-to-day variation.</li>
+        <li>Analyzing only slow, careful writing and ignoring natural writing. You need to analyze both to understand the gap between potential and default.</li>
+        <li>Analyzing without acting on the findings. The purpose of analysis is to guide your practice, not to fill a notebook with observations.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>After the first analysis session, you will have a clear understanding of your specific weaknesses. After one month of weekly analysis, you will see measurable improvements in your baseline consistency, letter height uniformity, spacing, and slant. After three months, your handwriting will have improved across all four dimensions, and your analysis will show steady improvement trends. The structured feedback loop of analysis followed by targeted practice followed by re-analysis is the most efficient path to handwriting improvement.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-18">
+    <div class="tip-number">Tip 18</div>
+    <h3>Build a Daily Practice Routine</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Consistency beats intensity every time. A structured daily routine removes the need to decide whether to practice. It transforms improvement from a choice into a habit. When practice becomes automatic, you no longer rely on motivation, which is unreliable and fleeting. A well-designed routine also ensures that you cover all aspects of handwriting improvement systematically rather than focusing on one area while neglecting others. The routine should include warm-up, skill practice, application, and cool-down. This complete structure ensures balanced development and prevents boredom. The Pentel EnerGel should be part of this routine, used consistently so that your hand learns its specific feel and flow as an integral part of your practice ritual.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Design a fifteen-minute daily routine with four phases: warm-up, skill practice, application, and cool-down.</li>
+        <li>Phase one: two minutes of warm-up. Draw loops, circles, and zigzag patterns to wake up your hand muscles.</li>
+        <li>Phase two: eight minutes of focused skill practice on one specific area such as spacing, slant, or a problem letter.</li>
+        <li>Phase three: three minutes of application. Write a real-world text like a to-do list or journal entry using the skill you just practiced.</li>
+        <li>Phase four: two minutes of cool-down. Review what you practiced, rate your effort, and write one sentence about tomorrow's focus.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Create a weekly practice schedule and pin it to the front of your notebook using your Pentel EnerGel.</li>
+        <li>Monday: letter-spacing day. Tuesday: slant-consistency day. Wednesday: problem-letter day.</li>
+        <li>Thursday: pressure-control day. Friday: word-spacing day. Saturday: free-writing application day. Sunday: rest.</li>
+        <li>Check off each day after you complete practice. This visual streak creates a powerful motivation effect.</li>
+        <li>After thirty days, the routine will be a habit. After ninety days, your handwriting will have transformed completely.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Designing a routine that is too ambitious and unsustainable. A fifteen-minute routine you complete is better than an hour you skip.</li>
+        <li>Skipping the warm-up phase. Jumping into skill practice with cold hands reduces quality and increases injury risk.</li>
+        <li>Changing your routine too frequently. Stick with the same structure for at least four weeks before adjusting.</li>
+        <li>Not having a backup plan for busy days. Keep a five-minute mini-routine ready. Never skip two days in a row.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>Within one week of following a structured routine, you will feel more organized and focused during practice. After one month, you will see improvement across multiple dimensions of your handwriting because the routine ensures balanced coverage. After three months, the routine will be an automatic daily habit, and your handwriting will have improved by a full grade level in legibility. The routine structure also makes it easier to resume practice after any breaks because the format is always familiar.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-19">
+    <div class="tip-number">Tip 19</div>
+    <h3>Learn From Good Handwriting Examples</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Your brain needs a clear target to aim for. Without a concrete model of good handwriting, you are trying to improve by avoiding bad habits rather than by adopting good ones. This is like trying to learn a song by listening to wrong notes instead of listening to the correct melody. Studying good handwriting examples gives your brain a visual template to internalize. Your hand will naturally begin to reproduce the patterns you expose it to regularly. This is the same principle behind immersion learning for languages. The more quality input you consume, the better your output becomes. Good handwriting examples also expand your awareness of what is possible. You may discover that you prefer a certain style of a, a particular way of crossing t, or a specific spacing aesthetic that you had never consciously considered.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Collect handwriting examples you find attractive and legible from handwritten letters, journals, or social media platforms like Instagram and Pinterest.</li>
+        <li>Save examples in a folder on your phone or print them and keep them in your notebook.</li>
+        <li>Spend a few minutes each day studying one example. Focus on one specific aspect such as letter formation, spacing, or slant.</li>
+        <li>Try to reproduce that specific aspect in your own writing immediately after studying it.</li>
+        <li>Focus on one style for at least two weeks before trying another to avoid mixing inconsistent elements.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Choose one handwriting example you particularly admire. Write the same sentence as the example.</li>
+        <li>Hold your version next to the example and compare them. Circle parts that look similar and parts that look different.</li>
+        <li>Focus your next practice session on closing the gap on the parts that look different.</li>
+        <li>Repeat this once per week using a different example each time.</li>
+        <li>Over several weeks, you will absorb elements from multiple styles and develop a refined personal handwriting.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Trying to exactly copy a highly stylized calligraphy hand that is impractical for daily writing. Choose legible, efficient examples.</li>
+        <li>Comparing your everyday handwriting to someone else's slow, careful handwriting. Compare like with like.</li>
+        <li>Studying examples passively without actively attempting to reproduce the forms. Looking is not enough.</li>
+        <li>Trying to adopt too many different styles at once. Pick one style and work with it for at least two weeks.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>After one week of studying and reproducing examples, you will see subtle shifts in your letter forms toward the styles you are studying. After one month, these shifts will become more pronounced and natural. After three months, you will have internalized elements from multiple examples and developed a refined personal handwriting style that is both legible and aesthetically pleasing. Your handwriting will no longer just be functional. It will be something you are proud of.</p>
+    </div>
+  </article>
+
+  <article class="tip-box" id="tip-20">
+    <div class="tip-number">Tip 20</div>
+    <h3>Common Mistakes to Avoid</h3>
+    <div class="tip-section">
+      <h4>Why This Matters</h4>
+      <p>Knowing what to avoid is just as important as knowing what to do. Many handwriting learners waste months or years repeating the same counterproductive habits because nobody ever told them that their approach was wrong. Understanding the most common mistakes in handwriting improvement allows you to bypass these traps and make consistent progress. The mistakes described in this tip represent the collective experience of handwriting coaches, occupational therapists, and master penmen. By learning from their experience, you can avoid the frustration of stalled progress. The Pentel EnerGel will serve you well in this journey, but only if you avoid the common pitfalls that undermine even the best tools.</p>
+    </div>
+    <div class="tip-section">
+      <h4>How to Practice</h4>
+      <ul>
+        <li>Read the list of ten common mistakes once per week as a reminder: wrong grip, pressing too hard, writing too fast, poor tools, irregular practice, ignoring posture, no goal, skipping warm-ups, getting discouraged by plateaus, comparing to others.</li>
+        <li>Identify which single mistake you are most prone to and focus on catching yourself when it happens.</li>
+        <li>Write your most common mistake at the top of each practice page as a visible warning.</li>
+        <li>After each session, note whether you fell into that trap and what triggered it.</li>
+        <li>Focus on correcting one mistake per week rather than trying to fix everything at once.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Practice Exercise</h4>
+      <ol>
+        <li>Create a checklist of the ten common mistakes listed above. Keep it in your practice notebook.</li>
+        <li>Every day before writing, review the checklist and identify which mistake you are most likely to make during that session.</li>
+        <li>Write that mistake at the top of your practice page as a warning to yourself.</li>
+        <li>After the session, check whether you fell into that trap. If you did, write a note about what triggered it.</li>
+        <li>After one month of this exercise, the frequency of your most common mistakes will decrease significantly because your brain will have been trained to anticipate and avoid them.</li>
+      </ol>
+    </div>
+    <div class="tip-section">
+      <h4>Common Mistakes</h4>
+      <ul>
+        <li>Trying to avoid all mistakes at once. Focus on correcting one mistake per week for sustainable progress.</li>
+        <li>Believing you are immune to these mistakes because you are aware of them. Awareness alone does not change behavior.</li>
+        <li>Feeling ashamed when you catch yourself making a mistake. Mistakes are data, not failures.</li>
+        <li>Not celebrating progress. If you used to grip too hard every session and now only half the time, that is real progress worth acknowledging.</li>
+        <li>Perfectionism. Your handwriting will never be perfect. It does not need to be. It only needs to be legible, comfortable, and yours.</li>
+      </ul>
+    </div>
+    <div class="tip-section">
+      <h4>Expected Results</h4>
+      <p>By actively working to avoid common mistakes, you will progress faster than you would by focusing only on positive techniques. Within two weeks of using the mistake checklist, you will catch yourself in the act of making a mistake at least once per session, which is the first step to correction. After one month, you will have reduced your most frequent mistake by half. After three months, the common mistakes that plague most learners will be rare in your practice. You will write with lighter pressure, a relaxed grip, better posture, and consistent practice habits, all because you learned to recognize and avoid the traps that catch most people.</p>
+    </div>
+  </article>
+
+</section>
+
+<!-- ============================================================
+     STICKY TIPS NAVIGATOR
+     ============================================================ -->
+<nav class="tips-nav" id="tipsNav" aria-label="Tips quick navigation">
+  <div class="tips-nav-header">Tips</div>
+  <ul class="tips-nav-list">
+    <li><a href="#tip-01">01 Practice</a></li>
+    <li><a href="#tip-02">02 Letter Style</a></li>
+    <li><a href="#tip-03">03 Pen Grip</a></li>
+    <li><a href="#tip-04">04 Tools</a></li>
+    <li><a href="#tip-05">05 Posture</a></li>
+    <li><a href="#tip-06">06 Letter Spacing</a></li>
+    <li><a href="#tip-07">07 Word Spacing</a></li>
+    <li><a href="#tip-08">08 Pressure</a></li>
+    <li><a href="#tip-09">09 Slow Down</a></li>
+    <li><a href="#tip-10">10 Paper</a></li>
+    <li><a href="#tip-11">11 Difficult Letters</a></li>
+    <li><a href="#tip-12">12 Slant</a></li>
+    <li><a href="#tip-13">13 Stretch</a></li>
+    <li><a href="#tip-14">14 Fatigue</a></li>
+    <li><a href="#tip-15">15 Feedback</a></li>
+    <li><a href="#tip-16">16 Progress</a></li>
+    <li><a href="#tip-17">17 Analysis</a></li>
+    <li><a href="#tip-18">18 Routine</a></li>
+    <li><a href="#tip-19">19 Examples</a></li>
+    <li><a href="#tip-20">20 Mistakes</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     PREMIUM FOOTER
+     ============================================================ -->
+<footer class="premium-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#tips">All Tips</a></li>
+        <li><a href="#showcase-ink">Smooth Ink Flow</a></li>
+        <li><a href="#showcase-grip">Comfortable Grip</a></li>
+        <li><a href="#showcase-tip">Precision Tip</a></li>
+        <li><a href="#showcase-dry">Fast Drying Ink</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#timeline">Journey Timeline</a></li>
+        <li><a href="#comparison">Comparison</a></li>
+        <li><a href="#stats">Statistics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul class="footer-social">
+        <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-brand">
+      <span class="footer-logo">Pentel EnerGel</span>
+      <p>Handwriting, reimagined.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 &mdash; Crafted with care for better handwriting</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     GSAP + CUSTOM SCRIPT
+     ============================================================ -->
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  // ---- MOBILE MENU TOGGLE ----
+  var toggle = document.querySelector(".nav-toggle");
+  var navLinks = document.querySelector(".nav-links");
+  if(toggle){
+    toggle.addEventListener("click", function(){
+      var open = navLinks.classList.toggle("open");
+      toggle.classList.toggle("active");
+      toggle.setAttribute("aria-expanded", open);
+    });
+    // Close on link click
+    navLinks.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        navLinks.classList.remove("open");
+        toggle.classList.remove("active");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // ---- NAV FADE-IN ----
+  gsap.from(".nav", {
+    y: -20,
+    opacity: 0,
+    duration: .6,
+    ease: "power3.out",
+    delay: .1
+  });
+
+  // ---- HERO STAGGERED REVEAL ----
+  var heroTl = gsap.timeline({ delay: .3 });
+  heroTl
+    .to(".hero-label", { y: 0, opacity: 1, duration: .6, ease: "power3.out" })
+    .to(".hero h2", { y: 0, opacity: 1, duration: .8, ease: "power3.out" }, "-=.2")
+    .to(".hero-subtitle", { y: 0, opacity: 1, duration: .7, ease: "power3.out" }, "-=.3")
+    .to(".hero-actions", { y: 0, opacity: 1, duration: .6, ease: "power3.out" }, "-=.2");
+
+  // ---- PEN SCROLL STORYTELLING ----
+  var pen = document.getElementById("penStory");
+
+  // Pin the pen and animate through story sections
+  var penTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".pen-story",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1.2,
+      pin: pen,
+      pinSpacing: false,
+      invalidateOnRefresh: true
+    }
+  });
+
+  // Story 1: Pen rises to upper-right, slight rotation
+  penTl.to(pen, {
+    x: "40vw",
+    y: "-20vh",
+    rotation: 8,
+    scale: .75,
+    duration: 1,
+    ease: "power1.inOut"
+  });
+
+  // Story 2: Pen moves left, changes rotation
+  penTl.to(pen, {
+    x: "-10vw",
+    y: "-40vh",
+    rotation: -4,
+    scale: .65,
+    duration: 1,
+    ease: "power1.inOut"
+  });
+
+  // Story 3: Pen centers, enlarges slightly
+  penTl.to(pen, {
+    x: "20vw",
+    y: "-10vh",
+    rotation: 2,
+    scale: .7,
+    duration: 1,
+    ease: "power1.inOut"
+  });
+
+  // Story 4: Pen moves to left side, final position
+  penTl.to(pen, {
+    x: "-30vw",
+    y: "-30vh",
+    rotation: -6,
+    scale: .6,
+    duration: 1,
+    ease: "power1.inOut"
+  });
+
+  // ---- FADE-IN CONTENT SECTIONS ----
+  gsap.utils.toArray(".content").forEach(function(section, i){
+    gsap.from(section, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      },
+      y: 40,
+      opacity: 0,
+      duration: .8,
+      ease: "power3.out",
+      delay: i * .05
+    });
+  });
+
+  // ---- TIP BOXES STAGGER REVEAL ----
+  gsap.utils.toArray(".tip-box").forEach(function(box, i){
+    gsap.from(box, {
+      scrollTrigger: {
+        trigger: box,
+        start: "top 88%",
+        toggleActions: "play none none none"
+      },
+      y: 30,
+      opacity: 0,
+      duration: .6,
+      ease: "power2.out",
+      delay: i * .03
+    });
+  });
+
+  // ---- TIP SECTION HEADINGS (Blur-in) ----
+  gsap.utils.toArray(".tip-section h4").forEach(function(h){
+    gsap.from(h, {
+      scrollTrigger: {
+        trigger: h,
+        start: "top 90%",
+        toggleActions: "play none none none"
+      },
+      filter: "blur(6px)",
+      opacity: 0,
+      duration: .5,
+      ease: "power2.out"
+    });
+  });
+
+  // ---- PEN STORY SECTION TEXT REVEAL ----
+  gsap.utils.toArray(".pen-story-content").forEach(function(content){
+    gsap.from(content.children, {
+      scrollTrigger: {
+        trigger: content.parentElement,
+        start: "top 75%",
+        toggleActions: "play none none none"
+      },
+      y: 40,
+      opacity: 0,
+      stagger: .15,
+      duration: .7,
+      ease: "power3.out"
+    });
+  });
+
+  // ---- READING PROGRESS BAR ----
+  var progressBar = document.getElementById("readingProgress");
+  if (progressBar) {
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = pct + "%";
+    });
+  }
+
+  // ---- BEFORE / AFTER SLIDER ----
+  var sliderWrapper = document.getElementById("sliderWrapper");
+  var sliderAfter = document.getElementById("sliderAfter");
+  var sliderHandle = document.getElementById("sliderHandle");
+  if (sliderWrapper && sliderAfter && sliderHandle) {
+    function setSlider(pct) {
+      pct = Math.max(3, Math.min(97, pct));
+      sliderAfter.style.clipPath = "inset(0 0 0 " + pct + "%)";
+      sliderHandle.style.left = pct + "%";
+    }
+    function getPos(e) {
+      var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      var rect = sliderWrapper.getBoundingClientRect();
+      return ((clientX - rect.left) / rect.width) * 100;
+    }
+    function onStart(e) {
+      e.preventDefault();
+      setSlider(getPos(e));
+      function onMove(ev) { ev.preventDefault(); setSlider(getPos(ev)); }
+      function onEnd() {
+        document.removeEventListener("mousemove", onMove);
+        document.removeEventListener("mouseup", onEnd);
+        document.removeEventListener("touchmove", onMove);
+        document.removeEventListener("touchend", onEnd);
+      }
+      document.addEventListener("mousemove", onMove);
+      document.addEventListener("mouseup", onEnd);
+      document.addEventListener("touchmove", onMove, { passive: false });
+      document.addEventListener("touchend", onEnd);
+    }
+    sliderWrapper.addEventListener("mousedown", onStart);
+    sliderWrapper.addEventListener("touchstart", onStart, { passive: true });
+  }
+
+  // ---- STICKY TIPS NAV ----
+  var tipsNav = document.getElementById("tipsNav");
+  var tipsSection = document.querySelector("#tips");
+  var tipBoxes = document.querySelectorAll(".tip-box");
+  var tipNavLinks = tipsNav ? tipsNav.querySelectorAll("a") : [];
+  if (tipsNav && tipsSection && tipBoxes.length) {
+    function updateTipsNav() {
+      var scrollY = window.scrollY + window.innerHeight / 3;
+      var current = "";
+      tipBoxes.forEach(function (box) {
+        if (scrollY >= box.offsetTop) { current = box.id; }
+      });
+      tipNavLinks.forEach(function (link) {
+        var href = link.getAttribute("href").substring(1);
+        link.classList.toggle("active", href === current);
+      });
+    }
+    function toggleTipsNav() {
+      var r = tipsSection.getBoundingClientRect();
+      tipsNav.classList.toggle("visible", r.top < window.innerHeight && r.bottom > 0);
+    }
+    window.addEventListener("scroll", function () { toggleTipsNav(); updateTipsNav(); });
+    toggleTipsNav();
+    updateTipsNav();
+  }
+
+  // ---- NUMBER COUNTER (STATISTICS) ----
+  var statNumbers = document.querySelectorAll(".stat-number");
+  if (statNumbers.length) {
+    var counted = false;
+    function animateNumbers() {
+      if (counted) return;
+      counted = true;
+      statNumbers.forEach(function (el) {
+        var target = parseInt(el.getAttribute("data-target"), 10);
+        if (isNaN(target)) return;
+        var current = 0;
+        var step = Math.max(1, Math.floor(target / 60));
+        function tick() {
+          current += step;
+          if (current >= target) {
+            el.textContent = target;
+            var sib = el.nextElementSibling;
+            if (sib && sib.classList.contains("stat-suffix")) {
+              el.parentNode.style.display = "inline";
+            }
+            return;
+          }
+          el.textContent = current;
+          requestAnimationFrame(tick);
+        }
+        tick();
+      });
+    }
+    var statsObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { animateNumbers(); statsObserver.disconnect(); }
+      });
+    }, { threshold: .3 });
+    statsObserver.observe(document.getElementById("stats"));
+  }
+
+  // ---- SHOWCASE SCROLL REVEAL ----
+  gsap.utils.toArray(".showcase").forEach(function (s, i) {
+    gsap.from(s.querySelector(".showcase-tag"), {
+      scrollTrigger: { trigger: s, start: "top 82%", toggleActions: "play none none none" },
+      y: 20, opacity: 0, duration: .5, ease: "power2.out"
+    });
+    gsap.from(s.querySelector(".showcase-text h2"), {
+      scrollTrigger: { trigger: s, start: "top 80%", toggleActions: "play none none none" },
+      y: 30, opacity: 0, duration: .7, ease: "power3.out", delay: .1
+    });
+    gsap.from(s.querySelector(".showcase-text p"), {
+      scrollTrigger: { trigger: s, start: "top 78%", toggleActions: "play none none none" },
+      y: 20, opacity: 0, duration: .6, ease: "power2.out", delay: .2
+    });
+    gsap.from(s.querySelector(".showcase-metrics"), {
+      scrollTrigger: { trigger: s, start: "top 76%", toggleActions: "play none none none" },
+      y: 20, opacity: 0, duration: .5, ease: "power2.out", delay: .35
+    });
+    gsap.from(s.querySelector(".showcase-visual"), {
+      scrollTrigger: { trigger: s, start: "top 80%", toggleActions: "play none none none" },
+      scale: .9, opacity: 0, duration: .8, ease: "power2.out"
+    });
+  });
+
+  // ---- TIMELINE ITEMS STAGGER ----
+  gsap.utils.toArray(".timeline-item").forEach(function (item, i) {
+    gsap.from(item, {
+      scrollTrigger: {
+        trigger: item, start: "top 88%", toggleActions: "play none none none"
+      },
+      x: -30, opacity: 0, duration: .6, ease: "power2.out", delay: i * .12
+    });
+  });
+
+  // ---- DARK MODE ----
+  (function () {
+    var html = document.documentElement;
+    var themeBtn = document.getElementById("themeToggle");
+    var themeMenu = document.getElementById("themeMenu");
+    var themeOptions = document.querySelectorAll(".theme-option");
+    var themeLabel = document.getElementById("themeLabel");
+    var iconSun = document.querySelector(".theme-icon-sun");
+    var iconMoon = document.querySelector(".theme-icon-moon");
+    if (!themeBtn) return;
+    var saved = localStorage.getItem("hw-theme") || "system";
+
+    function getSystemTheme() {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    function setTheme(theme) {
+      var active = theme === "system" ? getSystemTheme() : theme;
+      html.setAttribute("data-theme", active);
+      localStorage.setItem("hw-theme", theme);
+      themeOptions.forEach(function (o) {
+        o.classList.toggle("active", o.getAttribute("data-theme") === theme);
+      });
+      var isDark = active === "dark";
+      if (iconSun) iconSun.style.display = isDark ? "none" : "";
+      if (iconMoon) iconMoon.style.display = isDark ? "" : "none";
+      if (themeLabel) themeLabel.textContent = theme === "dark" ? "Dark" : theme === "system" ? "Auto" : "Light";
+    }
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+      if (localStorage.getItem("hw-theme") === "system") setTheme("system");
+    });
+    setTheme(saved);
+    themeBtn.addEventListener("click", function (e) { e.stopPropagation(); themeMenu.classList.toggle("open"); });
+    themeOptions.forEach(function (o) {
+      o.addEventListener("click", function () { setTheme(this.getAttribute("data-theme")); themeMenu.classList.remove("open"); });
+    });
+    document.addEventListener("click", function (e) {
+      if (!themeBtn.contains(e.target) && !themeMenu.contains(e.target)) themeMenu.classList.remove("open");
+    });
+  })();
+
+  // ---- PROGRESS TRACKER ----
+  (function () {
+    var KEY = "hw-progress";
+    var boxes = document.querySelectorAll("#progressList input[type='checkbox']");
+    var pctEl = document.getElementById("progressPct");
+    var fillEl = document.getElementById("progressFill");
+    if (!boxes.length) return;
+
+    function update() {
+      var total = boxes.length, done = 0;
+      boxes.forEach(function (cb) { if (cb.checked) done++; });
+      var pct = total > 0 ? Math.round(done / total * 100) : 0;
+      if (pctEl) pctEl.textContent = pct + "%";
+      if (fillEl) fillEl.style.width = pct + "%";
+    }
+
+    function save() {
+      var s = {};
+      boxes.forEach(function (cb) { s[cb.id] = cb.checked; });
+      localStorage.setItem(KEY, JSON.stringify(s));
+      update();
+    }
+
+    function load() {
+      var saved = localStorage.getItem(KEY);
+      if (!saved) return;
+      try { var s = JSON.parse(saved); boxes.forEach(function (cb) { cb.checked = s[cb.id] || false; }); } catch (e) { }
+      update();
+    }
+
+    boxes.forEach(function (cb) { cb.addEventListener("change", save); });
+    load();
+  })();
+
+  // ---- 30-DAY CHALLENGE ----
+  (function () {
+    var KEY = "hw-challenge";
+    var boxes = document.querySelectorAll("#challengeGrid input[type='checkbox']");
+    var dayEl = document.getElementById("challengeDay");
+    var pctEl = document.getElementById("challengePct");
+    var fillEl = document.getElementById("challengeFill");
+    if (!boxes.length) return;
+
+    function update() {
+      var total = boxes.length, done = 0;
+      boxes.forEach(function (cb, i) {
+        if (cb.checked) done++;
+        var item = cb.closest(".challenge-item");
+        if (item) item.classList.toggle("completed", cb.checked);
+      });
+      var pct = Math.round(done / total * 100);
+      if (dayEl) dayEl.textContent = "Day " + done + " of 30";
+      if (pctEl) pctEl.textContent = pct + "%";
+      if (fillEl) fillEl.style.width = pct + "%";
+    }
+
+    function save() {
+      var s = {};
+      boxes.forEach(function (cb) { s[cb.id] = cb.checked; });
+      localStorage.setItem(KEY, JSON.stringify(s));
+      update();
+    }
+
+    function load() {
+      var saved = localStorage.getItem(KEY);
+      if (!saved) return;
+      try { var s = JSON.parse(saved); boxes.forEach(function (cb) { cb.checked = s[cb.id] || false; }); } catch (e) { }
+      update();
+    }
+
+    boxes.forEach(function (cb) { cb.addEventListener("change", save); });
+    load();
+  })();
+
+  // ---- PEN EXPLORER HOTSPOTS ----
+  (function () {
+    var hotspots = document.querySelectorAll(".hotspot");
+    var detailName = document.getElementById("penFeatureDetail").querySelector(".pen-feature-name");
+    var detailDesc = document.getElementById("penFeatureDetail").querySelector(".pen-feature-desc");
+    var data = {
+      tip: { name: "Precision Tip", desc: "The needle-point tip delivers consistent ink flow for every stroke, curve, and connection you make." },
+      grip: { name: "Comfortable Grip", desc: "The ergonomic rubber grip reduces hand fatigue during extended writing sessions." },
+      ink: { name: "Smooth Ink Flow", desc: "Low-viscosity gel ink glides effortlessly, requiring only the weight of the pen." },
+      clip: { name: "Durable Clip", desc: "The secure pocket clip keeps your EnerGel always within reach and ready to write." }
+    };
+    function setActive(feature) {
+      hotspots.forEach(function (h) { h.classList.toggle("active", h.getAttribute("data-feature") === feature); });
+      if (data[feature]) { detailName.textContent = data[feature].name; detailDesc.textContent = data[feature].desc; }
+    }
+    hotspots.forEach(function (h) {
+      h.addEventListener("mouseenter", function () { setActive(this.getAttribute("data-feature")); });
+      h.addEventListener("click", function () { setActive(this.getAttribute("data-feature")); });
+    });
+    if (hotspots.length) setActive("tip");
+  })();
+
+  // ---- PRACTICE SHEET GENERATOR ----
+  (function () {
+    var generateBtn = document.getElementById("generateSheet");
+    var printBtn = document.getElementById("printSheet");
+    var output = document.getElementById("practiceOutput");
+    if (!generateBtn || !output) return;
+
+    var WORDS = {
+      beginner: ["cat","dog","sun","hat","pen","cup","bed","fox","ant","bus","map","book","fish","tree","star","ball","bird","hand","moon","rain","bell","desk","door","frog","gift","kite","lamp","nest","ring","sock","bell","duck","flag","glue","cake","leaf","milk","corn","seed","ship","drum","bell","wind","fire","rock","sand","wave","wing","pond","snow","boat","lamp","dish","bell","game","door","kite","rain","star","tree"],
+      intermediate: ["pencil","garden","winter","summer","basket","coffee","dinner","orange","purple","silver","bridge","castle","dragon","forest","planet","window","rabbit","turtle","marble","candle","button","cotton","hammer","jungle","kitten","ladder","market","napkin","puzzle","rocket","shield","tunnel","velvet","waffle","yellow","blanket","circus","donkey","fossil","goblin","hollow","insect","jigsaw","kettle","lantern","mitten","noodle","osprey","packet","quiver","robin","saddle","ticket","violet","wreath","tissue","pickle","dollar","ribbon","candle"],
+      advanced: ["abandon","balance","cascade","destiny","elegant","fantasy","gravity","harmony","imagine","journey","kingdom","liberty","mystery","natural","opinion","passage","quality","routine","silence","triumph","umbrella","vibrant","whisper","ancient","boundary","collage","delight","emotion","freedom","glimpse","harvest","illness","justice","kitchen","laughter","machine","notable","acclaim","bicycle","drawing","feather","grammar","hardship","imprint","jewelry","knowing","landmark","mammoth","navigate","orchard","parable","rainbow","sandals","textile","utility","vaccine","weather","yearning","zealous","twilight","penguin","blanket","diamond","journal","natural","measure","passage","culture","problem","product","special","picture","grammar","monitor","pattern","thought","million","capture","partial","fortune","imagine","outline","section","chapter","horizon","display","network","project","weather","harvest","nurture","journey","ancient","welcome","letters","practice","improve","writing"]
+    };
+
+    var SENTENCES = {
+      beginner: ["The cat sat on the mat.","I have a red pen.","The sun is hot.","She can run fast.","He has a big dog.","We like to read books.","The bird sings a song.","My hat is blue.","They play with a ball.","The fish swims in water.","I see a big tree.","She has a nice hand.","The star shines bright.","He sat on the bed.","We go to school.","The rain falls down.","I like the moon.","She can write well.","The bell rings loud.","He has a desk."],
+      intermediate: ["The quick brown fox jumps over the lazy dog.","Practice makes progress, not perfection.","Every journey begins with a single step.","She wrote a letter to her grandmother today.","Good handwriting is a form of respect.","The garden was full of colorful flowers.","He enjoyed reading books by the window.","Consistent practice leads to steady improvement.","The morning sun cast long shadows across the lawn.","She carefully formed each letter with precision.","A balanced approach to writing yields the best results.","The rhythm of handwriting is like a gentle dance.","Patience and persistence are keys to mastery.","He filled the page with elegant, flowing script.","The cool breeze carried the scent of pine."],
+      advanced: ["The delicate art of handwriting reflects the unique character and personality of each individual.","With deliberate practice and mindful attention to form, anyone can transform their handwriting into something beautiful.","The graceful curves of well-formed letters dance across the page like a carefully choreographed ballet of ink and paper.","She approached each stroke with the precision of a master calligrapher, turning ordinary words into works of art.","The journey to exceptional handwriting is paved with patience, persistence, and the quiet joy of watching one's skills develop over time.","In an age of digital communication, the handwritten letter carries an intimacy and authenticity that no email can replicate.","The subtle pressure variations in each downstroke and upstroke reveal the writer's emotional state and level of focus.","Mastering the nuances of letter spacing, slant consistency, and size uniformity transforms messy scrawl into refined script."]
+    };
+
+    function getLetters(level) {
+      var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      var lower = "abcdefghijklmnopqrstuvwxyz";
+      if (level === "beginner") {
+        // Focus on simpler letters
+        return "Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz";
+      }
+      // For intermediate/advanced, include letter pairs and combinations
+      var pairs = [];
+      var vowels = "aeiou";
+      for (var i = 0; i < lower.length; i++) {
+        for (var j = 0; j < vowels.length; j++) {
+          pairs.push(lower[i] + vowels[j] + lower[i]);
+        }
+      }
+      return "Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz";
+    }
+
+    function shuffle(arr) {
+      for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+      }
+      return arr;
+    }
+
+    function generateContent() {
+      var type = document.querySelector('input[name="p-type"]:checked');
+      var level = document.querySelector('input[name="p-level"]:checked');
+      var paper = document.querySelector('input[name="p-paper"]:checked');
+      if (!type || !level || !paper) return;
+
+      var typeVal = type.value;
+      var levelVal = level.value;
+      var paperVal = paper.value;
+
+      var lines = [];
+      var count = 12;
+
+      // Remove old paper classes
+      output.classList.remove("paper-lined", "paper-grid", "paper-dotted");
+      output.classList.add("paper-" + paperVal);
+
+      if (typeVal === "letters") {
+        var letters = getLetters(levelVal).split(" ");
+        var line = "";
+        for (var i = 0; i < count * 6; i++) {
+          line += letters[i % letters.length] + "  ";
+          if ((i + 1) % 6 === 0) { lines.push(line); line = ""; }
+        }
+        if (line) lines.push(line);
+      } else if (typeVal === "words") {
+        var list = WORDS[levelVal] || WORDS.beginner;
+        list = shuffle(list.slice());
+        for (var w = 0; w < Math.min(count * 4, list.length); w += 4) {
+          lines.push(list.slice(w, w + 4).join("    "));
+        }
+      } else if (typeVal === "sentences") {
+        var slist = SENTENCES[levelVal] || SENTENCES.beginner;
+        slist = shuffle(slist.slice());
+        for (var s = 0; s < Math.min(count, slist.length); s++) {
+          lines.push(slist[s]);
+        }
+      }
+
+      var html = '<div class="practice-sheet-content">';
+      lines.forEach(function (l) {
+        html += '<div class="practice-line">' + l + '</div>';
+      });
+      html += "</div>";
+      output.innerHTML = html;
+      output.classList.add("has-content");
+      printBtn.style.display = "inline-flex";
+    }
+
+    generateBtn.addEventListener("click", generateContent);
+
+    // Option clicks update active class
+    document.querySelectorAll(".practice-option").forEach(function (opt) {
+      opt.addEventListener("click", function () {
+        var parent = this.closest(".practice-options");
+        parent.querySelectorAll(".practice-option").forEach(function (o) { o.classList.remove("active"); });
+        this.classList.add("active");
+        this.querySelector("input").checked = true;
+      });
+    });
+
+    // Print
+    if (printBtn) {
+      printBtn.addEventListener("click", function () { window.print(); });
+    }
+  })();
+
+  // ---- AI HANDWRITING ANALYZER ----
+  (function () {
+    var zone = document.getElementById("uploadZone");
+    var input = document.getElementById("uploadInput");
+    var placeholder = document.getElementById("uploadPlaceholder");
+    var preview = document.getElementById("uploadPreview");
+    var img = document.getElementById("analyzerImg");
+    var resetBtn = document.getElementById("uploadReset");
+    var analyzeBtn = document.getElementById("analyzeBtn");
+    var statusEl = document.getElementById("analyzerStatus");
+    var empty = document.getElementById("analyzerEmpty");
+    var results = document.getElementById("analyzerResultsContent");
+    var overall = document.getElementById("overallScore");
+    var plan = document.getElementById("improvementPlan");
+    var list = document.getElementById("improvementList");
+    if (!zone || !input || !analyzeBtn) return;
+
+    var currentFile = null;
+    var scores = null;
+    var KEY = "hw-analyzer";
+
+    // ---- Load saved result ----
+    (function loadSaved() {
+      var saved = localStorage.getItem(KEY);
+      if (!saved) return;
+      try { var d = JSON.parse(saved); if (d.scores) displayResults(d.scores); } catch(e) {}
+    })();
+
+    // ---- Upload handlers ----
+    function handleFile(file) {
+      if (!file || !file.type.match(/^image\//)) { statusEl.textContent = "Please select a valid image file."; statusEl.className = "analyzer-status error"; return; }
+      if (file.size > 10 * 1024 * 1024) { statusEl.textContent = "Image must be under 10MB."; statusEl.className = "analyzer-status error"; return; }
+      currentFile = file;
+      statusEl.textContent = "";
+      statusEl.className = "analyzer-status";
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        img.src = e.target.result;
+        placeholder.style.display = "none";
+        preview.style.display = "";
+        zone.classList.add("has-image");
+        analyzeBtn.disabled = false;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    input.addEventListener("change", function () { if (input.files.length) handleFile(input.files[0]); });
+
+    // Drag & drop
+    zone.addEventListener("dragover", function (e) { e.preventDefault(); zone.classList.add("drag-over"); });
+    zone.addEventListener("dragleave", function () { zone.classList.remove("drag-over"); });
+    zone.addEventListener("drop", function (e) { e.preventDefault(); zone.classList.remove("drag-over"); if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]); });
+
+    // Click to upload (unless preview is showing)
+    zone.addEventListener("click", function (e) {
+      if (e.target.closest(".upload-reset")) return;
+      if (!currentFile) input.click();
+    });
+
+    // Reset (change image)
+    if (resetBtn) {
+      resetBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        currentFile = null;
+        placeholder.style.display = "";
+        preview.style.display = "none";
+        zone.classList.remove("has-image");
+        analyzeBtn.disabled = true;
+        statusEl.textContent = "";
+        statusEl.className = "analyzer-status";
+      });
+    }
+
+    // ---- Analyze ----
+    analyzeBtn.addEventListener("click", function () {
+      if (!currentFile) return;
+      statusEl.textContent = "Analyzing...";
+      statusEl.className = "analyzer-status analyzing";
+
+      // Use requestAnimationFrame to let UI update before heavy work
+      requestAnimationFrame(function () {
+        setTimeout(function () {
+          try {
+            var result = runAnalysis(img);
+            scores = result;
+            displayResults(result);
+            localStorage.setItem(KEY, JSON.stringify({ scores: result, timestamp: Date.now() }));
+            statusEl.textContent = "Analysis complete";
+            statusEl.className = "analyzer-status";
+          } catch (e) {
+            statusEl.textContent = "Analysis failed. Try a different image.";
+            statusEl.className = "analyzer-status error";
+          }
+        }, 100);
+      });
+    });
+
+    // ---- Analysis Engine ----
+    function runAnalysis(imgEl) {
+      var c = document.createElement("canvas");
+      var ctx = c.getContext("2d");
+      var MAX = 600;
+      var w = imgEl.naturalWidth, h = imgEl.naturalHeight;
+      if (w > MAX) { h = h * MAX / w; w = MAX; }
+      if (h > MAX) { w = w * MAX / h; h = MAX; }
+      c.width = Math.round(w); c.height = Math.round(h);
+      ctx.drawImage(imgEl, 0, 0, c.width, c.height);
+
+      var imageData = ctx.getImageData(0, 0, c.width, c.height);
+      var d = imageData.data;
+      var pix = new Float32Array(c.width * c.height);
+      var i, idx;
+      for (i = 0; i < c.width * c.height; i++) {
+        idx = i * 4;
+        pix[i] = 0.299 * d[idx] + 0.587 * d[idx+1] + 0.114 * d[idx+2];
+      }
+
+      var threshold = 180;
+      var totalPixels = pix.length;
+      var darkCount = 0, darkSum = 0;
+
+      for (i = 0; i < totalPixels; i++) {
+        if (pix[i] < threshold) {
+          darkCount++;
+          darkSum += (threshold - pix[i]) / threshold;
+        }
+      }
+
+      var inkDensity = darkCount / totalPixels;
+      var avgDark = darkCount > 0 ? darkSum / darkCount : 0;
+      var pressure = Math.round(Math.min(10, Math.max(1, (avgDark * 0.5 + inkDensity * 0.5) * 10)));
+
+      // Consistency: grid block density variation
+      var GRID = 8;
+      var blockDens = [];
+      for (var r = 0; r < GRID; r++) {
+        for (var c2 = 0; c2 < GRID; c2++) {
+          var x1 = Math.floor(c2 * c.width / GRID);
+          var x2 = Math.floor((c2 + 1) * c.width / GRID);
+          var y1 = Math.floor(r * c.height / GRID);
+          var y2 = Math.floor((r + 1) * c.height / GRID);
+          var cnt = 0, tot = 0;
+          for (var yy = y1; yy < y2; yy++) {
+            for (var xx = x1; xx < x2; xx++) {
+              tot++;
+              if (pix[yy * c.width + xx] < threshold) cnt++;
+            }
+          }
+          blockDens.push(tot > 0 ? cnt / tot : 0);
+        }
+      }
+      var meanD = blockDens.reduce(function(a,b){return a+b;},0) / blockDens.length;
+      var varD = blockDens.reduce(function(s,v){return s + (v-meanD)*(v-meanD);},0) / blockDens.length;
+      var stdD = Math.sqrt(varD);
+      var consistency = Math.round(Math.min(10, Math.max(1, (1 - Math.min(stdD / 0.2, 1)) * 10)));
+
+      // Spacing: horizontal gap analysis
+      var allGaps = [];
+      var sampleRows = [Math.floor(c.height*0.3), Math.floor(c.height*0.5), Math.floor(c.height*0.7)];
+      for (var si = 0; si < sampleRows.length; si++) {
+        var row = sampleRows[si];
+        var gapStart = -1;
+        for (var xi = 0; xi < c.width; xi++) {
+          var isDark = pix[row * c.width + xi] < threshold;
+          if (!isDark && gapStart < 0) gapStart = xi;
+          if (isDark && gapStart >= 0) {
+            var gap = xi - gapStart;
+            if (gap > 2) allGaps.push(gap);
+            gapStart = -1;
+          }
+        }
+      }
+      var spacing = 5;
+      if (allGaps.length > 4) {
+        var gMean = allGaps.reduce(function(a,b){return a+b;},0) / allGaps.length;
+        var gVar = allGaps.reduce(function(s,v){return s + (v-gMean)*(v-gMean);},0) / allGaps.length;
+        var gCV = Math.sqrt(gVar) / gMean;
+        spacing = Math.round(Math.min(10, Math.max(1, (1 - Math.min(gCV / 0.4, 1)) * 10)));
+      }
+
+      // Slant: gradient angle analysis
+      var angles = [];
+      for (var yi = 1; yi < c.height - 1; yi++) {
+        for (var xi2 = 1; xi2 < c.width - 1; xi2++) {
+          var gx = pix[yi * c.width + xi2 + 1] - pix[yi * c.width + xi2 - 1];
+          var gy = pix[(yi+1) * c.width + xi2] - pix[(yi-1) * c.width + xi2];
+          var mag = Math.sqrt(gx*gx + gy*gy);
+          if (mag > 25) {
+            var angle = Math.atan2(gy, gx) * 180 / Math.PI;
+            if (angle < 0) angle += 180;
+            angles.push(angle);
+          }
+        }
+      }
+      var slant = 5;
+      if (angles.length > 50) {
+        var nearVert = angles.filter(function(a){return a > 60 && a < 120;});
+        slant = Math.round(Math.min(10, Math.max(1, (nearVert.length / angles.length) * 10)));
+      }
+
+      return { consistency: consistency, spacing: spacing, slant: slant, pressure: pressure };
+    }
+
+    // ---- Display Results ----
+    function displayResults(scores) {
+      empty.style.display = "none";
+      results.style.display = "";
+      plan.style.display = "";
+
+      var vals = ["consistency","spacing","slant","pressure"];
+      var colors = { c: ["#ff3b30","#ff9500","#ffcc00","#34c759"], get: function(score) {
+        if (score >= 8) return this.c[3];
+        if (score >= 6) return this.c[2];
+        if (score >= 4) return this.c[1];
+        return this.c[0];
+      }};
+
+      var avg = 0, count = 0;
+      vals.forEach(function(k) {
+        if (scores[k] >= 1) { avg += scores[k]; count++; }
+      });
+      var overallScore = count > 0 ? (avg / count).toFixed(1) : "—";
+      overall.textContent = overallScore;
+
+      // Animate rings
+      vals.forEach(function(k) {
+        var ring = document.getElementById("ring-" + k);
+        var val = document.getElementById("val-" + k);
+        if (!ring || !val) return;
+        var score = scores[k] || 0;
+        var circ = 364.42;
+        var offset = circ * (1 - score / 10);
+        val.textContent = score;
+        ring.style.stroke = colors.get(score);
+        ring.style.strokeDashoffset = offset;
+        var card = document.getElementById("score-" + k);
+        if (card) card.style.borderColor = colors.get(score) + "33";
+      });
+
+      // Generate improvement plan
+      var tips = [];
+      if (scores.consistency < 7) tips.push({ area: "Consistency", tip: "Practice each letter of the alphabet slowly, repeating it 10 times before moving to the next. Use lined paper to keep letter sizes uniform." });
+      if (scores.spacing < 7) tips.push({ area: "Spacing", tip: "Focus on keeping equal distance between letters within a word. Try grid paper to train your eye for consistent gaps." });
+      if (scores.slant < 7) tips.push({ area: "Slant", tip: "Pay attention to the angle of your letters. Use a slant guide sheet underneath your practice paper for reference." });
+      if (scores.pressure < 7) tips.push({ area: "Pressure", tip: "Relax your grip and let the pen do the work. The Pentel EnerGel requires minimal pressure for smooth ink flow." });
+      if (tips.length === 0) tips.push({ area: "Excellent", tip: "Your handwriting shows strong fundamentals across all metrics. Focus on maintaining consistency and developing your personal style." });
+
+      list.innerHTML = tips.map(function(t) {
+        return "<li><strong>" + t.area + ":</strong> " + t.tip + "</li>";
+      }).join("");
+    }
+  })();
+
+  // ---- REFRESH ScrollTrigger on load ----
+  ScrollTrigger.refresh();
+
+});
+</script>
+
+</body>
+</html>
